@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TjGeDan" id="gTV-IL-0wX" customClass="MusicOfTjGeDanCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iqc-iR-71y">
+                        <rect key="frame" x="0.0" y="0.0" width="150" height="113"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sW5-Ay-2Ea">
+                        <rect key="frame" x="0.0" y="112" width="150" height="20"/>
+                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sQe-0h-gSP">
+                        <rect key="frame" x="0.0" y="132" width="150" height="18"/>
+                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="sQe-0h-gSP" secondAttribute="trailing" id="7KN-kY-EsH"/>
+                <constraint firstAttribute="trailing" secondItem="sW5-Ay-2Ea" secondAttribute="trailing" id="Aox-iQ-rFY"/>
+                <constraint firstAttribute="trailing" secondItem="iqc-iR-71y" secondAttribute="trailing" id="ClO-Z3-spS"/>
+                <constraint firstItem="iqc-iR-71y" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="OL8-db-ldG"/>
+                <constraint firstItem="sQe-0h-gSP" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="OnQ-G1-47R"/>
+                <constraint firstAttribute="bottom" secondItem="sQe-0h-gSP" secondAttribute="bottom" id="T0J-iR-3bO"/>
+                <constraint firstItem="sW5-Ay-2Ea" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="VPf-G7-a9A"/>
+                <constraint firstItem="sQe-0h-gSP" firstAttribute="top" secondItem="sW5-Ay-2Ea" secondAttribute="bottom" id="aqf-AU-eUB"/>
+                <constraint firstAttribute="bottom" secondItem="sW5-Ay-2Ea" secondAttribute="bottom" id="lqT-PN-r8K"/>
+                <constraint firstItem="sW5-Ay-2Ea" firstAttribute="top" secondItem="iqc-iR-71y" secondAttribute="bottom" id="sDN-gF-ckQ"/>
+                <constraint firstItem="iqc-iR-71y" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="wDP-Jd-0LL"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="lqT-PN-r8K"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="imageV" destination="iqc-iR-71y" id="a5r-gt-IXL"/>
+                <outlet property="playCountL" destination="sQe-0h-gSP" id="3Kg-Ng-MFs"/>
+                <outlet property="titleL" destination="sW5-Ay-2Ea" id="0LR-RH-RtW"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+</document>
