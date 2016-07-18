@@ -19,12 +19,12 @@
     // Do any additional setup after loading the view.
 }
 
--(void)configMyViewWith:(id)model{
-    
-}
--(void)refreshMyView{
-    
-}
+//-(void)configMyViewWith:(id)model{
+//    
+//}
+//-(void)refreshMyView{
+//    
+//}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

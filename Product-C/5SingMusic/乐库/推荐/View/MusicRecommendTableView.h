@@ -17,8 +17,12 @@
 @property (nonatomic, strong) NSMutableArray *modelArrayOfTjLive;
 @property (nonatomic, strong) NSMutableArray *modelArrayOfTjItems;
 
+// 推荐广告blcok跳转
+@property (nonatomic, copy) void (^AdvPush)(NSInteger index);
 // 每日推荐block跳转
 @property (nonatomic, copy) void (^DayPush)(NSString *type, NSString *songID);
+// 推荐歌单block跳转
+@property (nonatomic, copy) void (^GeDanPush)(NSInteger index);
 // 专题block跳转
 @property (nonatomic, copy) void (^ItemsPush)(NSString *url, NSString *title);
 

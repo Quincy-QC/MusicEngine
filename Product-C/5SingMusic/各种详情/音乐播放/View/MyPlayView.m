@@ -8,7 +8,7 @@
 
 #import "MyPlayView.h"
 
-@interface MyPlayView () <NCMusicEngineDelegate>
+@interface MyPlayView () <NCMusicEngineDelegate, AVAudioPlayerDelegate>
 @property (strong, nonatomic) IBOutlet UIImageView *iconV;
 @property (strong, nonatomic) IBOutlet UILabel *titleL;
 @property (strong, nonatomic) IBOutlet UISlider *musicProgressS;
@@ -31,9 +31,14 @@
     if (!_player) {
         _player = [[NCMusicEngine alloc] init];
         _player.delegate = self;
+//        _player.player.delegate = self;
     }
     return _player;
 }
+
+//- (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag {
+//    [(MusicPlayerViewController *)self.MyParentVC playNextMusicAuto];
+//}
 
 - (void)toPlayWithSong:(SongModel *)model {
     [self.iconV sd_setImageWithURL:[NSURL URLWithString:model.I]];
@@ -50,6 +55,9 @@
     self.musicProgressS.value = currentTime/totalTime;
     self.currentTimeL.text = [NSString stringWithFormat:@"%02ld:%02ld", (NSInteger)currentTime/60, (NSInteger)currentTime%60];
     self.totalTimeL.text = [NSString stringWithFormat:@"%02ld:%02ld", (NSInteger)totalTime/60, (NSInteger)totalTime%60];
+    if (currentTime >= totalTime - 1.0 && totalTime > 0) {
+        [(MusicPlayerViewController *)self.MyParentVC playNextMusicAuto];
+    }
 }
 
 - (IBAction)musicPlayAction:(UIButton *)sender {
@@ -60,11 +68,8 @@
         [self.player stop];
     }
 }
-- (IBAction)musicAboveAction:(UIButton *)sender {
-}
-- (IBAction)musicNextAction:(UIButton *)sender {
-}
 - (IBAction)moveMusicProgressAction:(UISlider *)sender {
+    self.player.player.currentTime = sender.value * self.player.player.duration;
 }
 - (IBAction)shareAction:(UIButton *)sender {
 }

@@ -7,6 +7,8 @@
 //
 
 #import "MyCommonBaseViewController.h"
+#import "MusicPlayerViewController.h"
+#import "MusicSearchViewController.h"
 
 @interface MyCommonBaseViewController ()  <UIScrollViewDelegate>
 
@@ -117,20 +119,19 @@
 }
 
 #pragma mark --leftBtn点击事件
-//-(void)search:(UIButton *)sender{
-//    MySearchMusicController *search =[[MySearchMusicController alloc]init];
-//    [self presentViewController:search animated:YES completion:^{
-//        
-//    }];
-//}
-//-(void)write:(UIButton *)sender{
-//    
-//}
-//#pragma mark --rightBtn点击事件
-//-(void)listenMusic:(UIButton *)sender{
-//    PlayMusicController *play =[PlayMusicController sharePlayMusicViewWithSongType:NULL AndSongId:NULL];
-//    [self.navigationController pushViewController:play animated:YES];
-//}
+-(void)search:(UIButton *)sender{
+    MusicSearchViewController *musicSearchVC =[[MusicSearchViewController alloc] init];
+    [self presentViewController:musicSearchVC animated:YES completion:nil];
+}
+
+-(void)write:(UIButton *)sender{
+    NSLog(@"没接口怎么办");
+}
+#pragma mark --rightBtn点击事件
+-(void)listenMusic:(UIButton *)sender{
+    MusicPlayerViewController *musicPlayerVC = [MusicPlayerViewController sharedMusicPlayerWithSongType:nil songID:nil];
+    [self.navigationController pushViewController:musicPlayerVC animated:YES];
+}
 #pragma mark --midBtn点击事件
 -(void)midBtnClick:(UIButton *)sender{
     for (int i =0; i<_btnTitleArray.count; i++) {

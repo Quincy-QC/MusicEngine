@@ -17,6 +17,7 @@
     [model setValuesForKeysWithDictionary:dic[@"data"]];
     model.NN = [dic valueForKeyPath:@"data.user.NN"];
     model.I = [dic valueForKeyPath:@"data.user.I"];
+//    model.ID = [dic valueForKeyPath:@"data.user.ID"];
     return model;
 }
 

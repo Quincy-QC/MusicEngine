@@ -19,14 +19,15 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        [self addSubview:self.scrollV];
         [self.scrollV addSubview:self.myLyricL];
+        [self addSubview:self.scrollV];
         
-        [self.myLyricL mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.equalTo(self).offset(10);
-            make.right.equalTo(self).offset(10);
-            make.top.equalTo(self).offset(10);
-        }];
+//        [self.myLyricL mas_makeConstraints:^(MASConstraintMaker *make) {
+//            make.left.equalTo(self).offset(10);
+////            make.right.equalTo(self).offset(-10);
+//            make.top.equalTo(self).offset(10);
+//            make.width.equalTo(@(KScreenW - 20));
+//        }];
     }
     return self;
 }
@@ -57,7 +58,9 @@
     } else {
         self.myLyricL.text = string;
     }
-    self.scrollV.contentSize = self.myLyricL.frame.size;
+    CGSize size = [self.myLyricL sizeThatFits:CGSizeMake(KScreenW - 20, MAXFLOAT)];
+    self.myLyricL.frame = CGRectMake(10, 10, KScreenW - 20, size.height);
+    self.scrollV.contentSize = CGSizeMake(size.width, size.height + 20);
 }
 
 @end

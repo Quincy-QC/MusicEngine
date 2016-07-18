@@ -1,24 +1,22 @@
 //
-//  ModelOfTjDAY.m
+//  ModelOfMusicSearch.m
 //  Product-C
 //
-//  Created by UntilYou-QC on 16/7/15.
+//  Created by UntilYou-QC on 16/7/18.
 //  Copyright © 2016年 UntilYou-QC. All rights reserved.
 //
 
-#import "ModelOfTjDAY.h"
+#import "ModelOfMusicSearch.h"
 
-@implementation ModelOfTjDAY
+@implementation ModelOfMusicSearch
 
 - (void)setValue:(id)value forUndefinedKey:(NSString *)key {}
 
 + (NSMutableArray *)modelConfiguredByJson:(NSDictionary *)dic {
     NSMutableArray *array = [NSMutableArray array];
-    for (NSDictionary *dict in dic[@"data"]) {
-        ModelOfTjDAY *model = [[ModelOfTjDAY alloc] init];
+    for (NSDictionary *dict in dic[@"data"][@"songArray"]) {
+        ModelOfMusicSearch *model = [[ModelOfMusicSearch alloc] init];
         [model setValuesForKeysWithDictionary:dict];
-        model.Id = dict[@"Content"][@"Id"];
-        model.Type = dict[@"Content"][@"Type"];
         [array addObject:model];
     }
     return array;

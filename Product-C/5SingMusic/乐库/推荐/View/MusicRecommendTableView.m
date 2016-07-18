@@ -13,7 +13,7 @@
 #import "MusicOfTjLiveCollectionView.h"
 #import "MusicOfTjItemsTableViewCell.h"
 
-@interface MusicRecommendTableView () <UITableViewDataSource, UITableViewDelegate>
+@interface MusicRecommendTableView () <UITableViewDataSource, UITableViewDelegate, UICollectionViewDelegate>
 
 @end
 
@@ -65,6 +65,7 @@
             UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"reuse" forIndexPath:indexPath];
             if (self.modelArrayOfTjGeDan) {
                 MusicOfTjGeDanCollectionView *tjGeDanCollectionView = [[MusicOfTjGeDanCollectionView alloc] initWithFrame:cell.bounds modelArray:self.modelArrayOfTjGeDan];
+                tjGeDanCollectionView.delegate = self;
                 [cell.contentView addSubview:tjGeDanCollectionView];
             }
             return cell;
@@ -152,6 +153,10 @@
     }
 }
 
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    self.GeDanPush(indexPath.row);
+}
+
 // 创建推荐广告栏
 - (void)createScrollViewWithSuperView:(UITableViewCell *)cell {
     NSMutableArray *imageUrls = [NSMutableArray array];
@@ -159,6 +164,9 @@
         [imageUrls addObject:model.ImgUrl];
     }
     CarouselView *carouselView = [[CarouselView alloc] initWithFrame:cell.bounds imageURLs:imageUrls];
+    carouselView.imageClick = ^(NSInteger index) {
+        self.AdvPush(index);
+    };
     [cell.contentView addSubview:carouselView];
 }
 

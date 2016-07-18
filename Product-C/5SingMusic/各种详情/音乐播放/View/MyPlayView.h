@@ -10,6 +10,9 @@
 #import "SongModel.h"
 
 @interface MyPlayView : MyCommonView
+@property (strong, nonatomic) IBOutlet UIButton *musicAboveButton;
+@property (strong, nonatomic) IBOutlet UIButton *musicNextButton;
+
 - (void)toPlayWithSong:(SongModel *)model;
 
 @end

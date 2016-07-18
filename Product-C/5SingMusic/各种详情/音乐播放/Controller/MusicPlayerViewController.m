@@ -170,6 +170,8 @@
         _myPlayV = [[[NSBundle mainBundle] loadNibNamed:@"MyPlayView" owner:self options:nil] firstObject];
         _myPlayV.frame = CGRectMake(0, KScreenH - 64 * 3, KScreenW, 64 * 3);
         _myPlayV.MyParentVC = self;
+        [_myPlayV.musicAboveButton addTarget:self action:@selector(aboveMusicAction) forControlEvents:(UIControlEventTouchUpInside)];
+        [_myPlayV.musicNextButton addTarget:self action:@selector(nextMusicAction) forControlEvents:(UIControlEventTouchUpInside)];
     }
     return _myPlayV;
 }
@@ -179,6 +181,34 @@
         _songArray = [NSMutableArray array];
     }
     return _songArray;
+}
+
+#pragma mark ----- 切歌 -----
+- (void)aboveMusicAction {
+    self.myPlayIndex -= 1;
+    if (self.myPlayIndex < 0) {
+        self.myPlayIndex = self.songArray.count - 1;
+    }
+    SongModel *model = self.songArray[self.myPlayIndex];
+    self.songType = model.SK;
+    self.songID = model.UID;
+    [self createDataWithType:@"1"];
+}
+
+- (void)nextMusicAction {
+    self.myPlayIndex += 1;
+    if (self.myPlayIndex >= self.songArray.count) {
+        self.myPlayIndex = 0;
+    }
+    SongModel *model = self.songArray[self.myPlayIndex];
+    self.songType = model.SK;
+    self.songID = model.UID;
+    [self createDataWithType:@"1"];
+}
+
+- (void)playNextMusicAuto {
+    NSLog(@"自动切歌");
+    [self nextMusicAction];
 }
 
 - (void)didReceiveMemoryWarning {

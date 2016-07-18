@@ -10,7 +10,7 @@
 
 @interface MyBaseViewController : UIViewController
 @property (nonatomic,strong) UIViewController *myParentVC;//父容器的VC
--(void)refreshMyView;
--(void)configMyViewWith:(id)model;
+//-(void)refreshMyView;
+//-(void)configMyViewWith:(id)model;
 
 @end

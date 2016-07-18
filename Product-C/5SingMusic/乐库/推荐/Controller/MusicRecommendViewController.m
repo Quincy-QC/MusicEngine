@@ -13,7 +13,10 @@
 #import "ModelOfTjGeDan.h"
 #import "ModelOfTjLive.h"
 #import "ModelOfTjItems.h"
+#import "DetailMusicModel.h"
 #import "MusicOfTjItemsDetailViewController.h"
+#import "MusicPlayerViewController.h"
+#import "DetailViewController.h"
 
 @interface MusicRecommendViewController ()
 @property (nonatomic, strong) MusicRecommendTableView *musicRecommendTV;
@@ -108,9 +111,39 @@
 - (void)pushDetailViewControllerWhenSelected {
     __weak MusicRecommendViewController *recommendVC = self;
     
+    recommendVC.musicRecommendTV.AdvPush = ^(NSInteger index) {
+        ModelOfTjADV *model = self.modelArrayOfTjADV[index];
+        if ([model.BehaviorType isEqualToString:@"1"]) {
+            NSString *songType = [model.LinkUrl substringToIndex:2];
+            NSString *songId = [model.LinkUrl substringFromIndex:3];
+            MusicPlayerViewController *musicVC = [MusicPlayerViewController sharedMusicPlayerWithSongType:songType songID:songId];
+            [self.myParentVC.navigationController pushViewController:musicVC animated:YES];
+        } else if ([model.BehaviorType isEqualToString:@"2"]) {
+            DetailViewController *geDanVC = [[DetailViewController alloc] init];
+            geDanVC.midTitle = model.Title;
+            geDanVC.listID = model.LinkUrl;
+            [self.myParentVC.navigationController pushViewController:geDanVC animated:YES];
+        } else if ([model.BehaviorType isEqualToString:@"4"]) {
+            MusicOfTjItemsDetailViewController *tjItemsDetailVC = [[MusicOfTjItemsDetailViewController alloc] init];
+            tjItemsDetailVC.midTitle = model.Title;
+            tjItemsDetailVC.url = model.LinkUrl;
+            [self.myParentVC.navigationController pushViewController:tjItemsDetailVC animated:YES];
+        } else {
+            NSLog(@"还没写这种类型!");
+        }
+    };
+    
     recommendVC.musicRecommendTV.DayPush = ^(NSString *type, NSString *songID) {
         MusicPlayerViewController *musicPlayerVC = [MusicPlayerViewController sharedMusicPlayerWithSongType:type songID:songID];
         [recommendVC.myParentVC.navigationController pushViewController:musicPlayerVC animated:YES];
+    };
+    
+    recommendVC.musicRecommendTV.GeDanPush = ^(NSInteger index) {
+        ModelOfTjGeDan *model = self.modelArrayOfTjGeDan[index];
+        DetailViewController *musicDetailVC = [[DetailViewController alloc] init];
+        musicDetailVC.listID = model.SongListId;
+        musicDetailVC.midTitle = model.Title;
+        [self.myParentVC.navigationController pushViewController:musicDetailVC animated:YES];
     };
     
     recommendVC.musicRecommendTV.ItemsPush = ^(NSString *url, NSString *title) {

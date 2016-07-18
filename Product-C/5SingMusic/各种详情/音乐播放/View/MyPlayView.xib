@@ -42,9 +42,6 @@
                         <constraint firstAttribute="height" constant="40" id="eAh-t0-YYL"/>
                     </constraints>
                     <state key="normal" image="menu_next"/>
-                    <connections>
-                        <action selector="musicNextAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="H4d-PY-E7o"/>
-                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x1U-my-oPT">
                     <rect key="frame" x="187" y="142" width="40" height="40"/>
@@ -73,9 +70,6 @@
                         <constraint firstAttribute="width" constant="40" id="4Vl-RV-4v9"/>
                     </constraints>
                     <state key="normal" image="menu_above"/>
-                    <connections>
-                        <action selector="musicAboveAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="YbR-hL-D9V"/>
-                    </connections>
                 </button>
                 <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ULg-Qw-sRj">
                     <rect key="frame" x="28" y="84" width="358" height="31"/>
@@ -137,6 +131,8 @@
             <connections>
                 <outlet property="currentTimeL" destination="r0n-or-s8f" id="8b9-pR-Omu"/>
                 <outlet property="iconV" destination="Aa2-A4-DUE" id="mNQ-NA-WyL"/>
+                <outlet property="musicAboveButton" destination="BtN-jQ-9mL" id="sok-1p-KkO"/>
+                <outlet property="musicNextButton" destination="UrZ-Is-S2S" id="2ex-EW-ZJy"/>
                 <outlet property="musicProgressS" destination="ULg-Qw-sRj" id="A2z-9d-BMg"/>
                 <outlet property="playButton" destination="x1U-my-oPT" id="SBU-Dt-2BU"/>
                 <outlet property="titleL" destination="t7S-5m-lLC" id="s4J-YZ-oau"/>

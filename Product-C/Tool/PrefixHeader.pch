@@ -73,7 +73,7 @@
 //http://mobileapi.5sing.kugou.com/song/hottag?limit=10&version=5.8.0
 //tfboys
 #define SEARCH_TEXT @"http://5sing.shuoba.org/search/search?k=%@&t=0&filterType=1&pn=1&ps=20&sortType=0&version=5.8.0"
-
+//#define SEARCH_TEXT @"http://5sing.shuoba.org/search/search?k=%E5%A2%A8%E5%AE%9D&t=0&filterType=1&pn=1&ps=20&sortType=0&version=5.8.0"
 
 //音乐人
 //推荐

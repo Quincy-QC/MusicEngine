@@ -27,7 +27,7 @@
 }
 
 - (void)cellConfiguredByModel:(SongModel *)model withIndex:(NSInteger)index {
-    self.titleL.text = [NSString stringWithFormat:@"%ld %@-%@", index, model.SN, model.NN];
+    self.titleL.text = [NSString stringWithFormat:@"%ld %@-%@", index + 1, model.SN, model.NN];
 }
 
 - (IBAction)downLoadAction:(UIButton *)sender {

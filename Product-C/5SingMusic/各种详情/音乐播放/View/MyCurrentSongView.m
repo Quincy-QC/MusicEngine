@@ -60,9 +60,6 @@
     UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, KScreenW, KRealValue(40))];
     headerView.backgroundColor = KColorWithAlpha(250, 250, 250, 0.1);
     
-    self.numberL = [[UILabel alloc] init];
-    self.numberL.text = @"0首歌曲";
-    self.numberL.textColor = KColor(200, 200, 200);
     [headerView addSubview:self.numberL];
     [self.numberL mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(headerView).offset(10);
@@ -78,8 +75,16 @@
 
 -(void)ConfigMyViewWithArray:(NSArray *)array{
     self.songArray =[[NSMutableArray alloc]initWithArray:array];
-    self.numberL.text =[NSString stringWithFormat:@"%ld首歌曲",self.songArray.count];
+    self.numberL.text =[NSString stringWithFormat:@"%ld 首歌曲",self.songArray.count];
     [self.songTableView reloadData];
+}
+
+- (UILabel *)numberL {
+    if (!_numberL) {
+        _numberL = [[UILabel alloc] init];
+        self.numberL.textColor = KColor(200, 200, 200);
+    }
+    return _numberL;
 }
 
 @end

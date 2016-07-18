@@ -73,6 +73,12 @@
 		4B9585AD1D3A377E00ED22BD /* MyInspirationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9585AC1D3A377E00ED22BD /* MyInspirationView.m */; };
 		4B9585B01D3A56E900ED22BD /* MyPlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9585AF1D3A56E900ED22BD /* MyPlayView.m */; };
 		4B9585B21D3A57AA00ED22BD /* MyPlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B9585B11D3A57AA00ED22BD /* MyPlayView.xib */; };
+		4B9586121D3CCC2800ED22BD /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9586091D3CCC2800ED22BD /* DetailViewController.m */; };
+		4B9586131D3CCC2800ED22BD /* DetailMusicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B95860C1D3CCC2800ED22BD /* DetailMusicModel.m */; };
+		4B9586141D3CCC2800ED22BD /* DetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B95860F1D3CCC2800ED22BD /* DetailTableViewCell.m */; };
+		4B9586151D3CCC2800ED22BD /* HeadVIew.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9586111D3CCC2800ED22BD /* HeadVIew.m */; };
+		4B95861F1D3D137A00ED22BD /* MusicSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B95861E1D3D137A00ED22BD /* MusicSearchViewController.m */; };
+		4B9586221D3D283500ED22BD /* ModelOfMusicSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9586211D3D283500ED22BD /* ModelOfMusicSearch.m */; };
 		D9968E00CCBB31ED97485013 /* libPods-Product-C.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 981E6FFBF859AF0D466F6DAA /* libPods-Product-C.a */; };
 /* End PBXBuildFile section */
 
@@ -221,6 +227,18 @@
 		4B9585AE1D3A56E900ED22BD /* MyPlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyPlayView.h; sourceTree = "<group>"; };
 		4B9585AF1D3A56E900ED22BD /* MyPlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyPlayView.m; sourceTree = "<group>"; };
 		4B9585B11D3A57AA00ED22BD /* MyPlayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyPlayView.xib; sourceTree = "<group>"; };
+		4B9586081D3CCC2800ED22BD /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		4B9586091D3CCC2800ED22BD /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		4B95860B1D3CCC2800ED22BD /* DetailMusicModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailMusicModel.h; sourceTree = "<group>"; };
+		4B95860C1D3CCC2800ED22BD /* DetailMusicModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailMusicModel.m; sourceTree = "<group>"; };
+		4B95860E1D3CCC2800ED22BD /* DetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailTableViewCell.h; sourceTree = "<group>"; };
+		4B95860F1D3CCC2800ED22BD /* DetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailTableViewCell.m; sourceTree = "<group>"; };
+		4B9586101D3CCC2800ED22BD /* HeadVIew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeadVIew.h; sourceTree = "<group>"; };
+		4B9586111D3CCC2800ED22BD /* HeadVIew.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeadVIew.m; sourceTree = "<group>"; };
+		4B95861D1D3D137A00ED22BD /* MusicSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicSearchViewController.h; sourceTree = "<group>"; };
+		4B95861E1D3D137A00ED22BD /* MusicSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicSearchViewController.m; sourceTree = "<group>"; };
+		4B9586201D3D283500ED22BD /* ModelOfMusicSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelOfMusicSearch.h; sourceTree = "<group>"; };
+		4B9586211D3D283500ED22BD /* ModelOfMusicSearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelOfMusicSearch.m; sourceTree = "<group>"; };
 		679C83CDB27C4A9442A6D0ED /* Pods-Product-C.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Product-C.release.xcconfig"; path = "Pods/Target Support Files/Pods-Product-C/Pods-Product-C.release.xcconfig"; sourceTree = "<group>"; };
 		8CD8B11ADA76D3D49EE27490 /* Pods-Product-C.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Product-C.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Product-C/Pods-Product-C.debug.xcconfig"; sourceTree = "<group>"; };
 		981E6FFBF859AF0D466F6DAA /* libPods-Product-C.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Product-C.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -338,6 +356,7 @@
 			isa = PBXGroup;
 			children = (
 				4B9585351D38CBE200ED22BD /* 乐库 */,
+				4B9586161D3D0E2500ED22BD /* 音乐搜索 */,
 				4B9585911D3A105900ED22BD /* 各种详情 */,
 				4B9584831D38902100ED22BD /* Common */,
 			);
@@ -664,6 +683,7 @@
 		4B9585911D3A105900ED22BD /* 各种详情 */ = {
 			isa = PBXGroup;
 			children = (
+				4B9586061D3CCC2800ED22BD /* 歌单详情 */,
 				4B9585921D3A105900ED22BD /* 直播详情 */,
 				4B9585961D3A105900ED22BD /* 音乐播放 */,
 			);
@@ -744,6 +764,80 @@
 				4B9585AE1D3A56E900ED22BD /* MyPlayView.h */,
 				4B9585AF1D3A56E900ED22BD /* MyPlayView.m */,
 				4B9585B11D3A57AA00ED22BD /* MyPlayView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4B9586061D3CCC2800ED22BD /* 歌单详情 */ = {
+			isa = PBXGroup;
+			children = (
+				4B9586071D3CCC2800ED22BD /* Controller */,
+				4B95860A1D3CCC2800ED22BD /* Model */,
+				4B95860D1D3CCC2800ED22BD /* View */,
+			);
+			path = "歌单详情";
+			sourceTree = "<group>";
+		};
+		4B9586071D3CCC2800ED22BD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4B9586081D3CCC2800ED22BD /* DetailViewController.h */,
+				4B9586091D3CCC2800ED22BD /* DetailViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4B95860A1D3CCC2800ED22BD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4B95860B1D3CCC2800ED22BD /* DetailMusicModel.h */,
+				4B95860C1D3CCC2800ED22BD /* DetailMusicModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4B95860D1D3CCC2800ED22BD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4B95860E1D3CCC2800ED22BD /* DetailTableViewCell.h */,
+				4B95860F1D3CCC2800ED22BD /* DetailTableViewCell.m */,
+				4B9586101D3CCC2800ED22BD /* HeadVIew.h */,
+				4B9586111D3CCC2800ED22BD /* HeadVIew.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4B9586161D3D0E2500ED22BD /* 音乐搜索 */ = {
+			isa = PBXGroup;
+			children = (
+				4B9586171D3D0E2500ED22BD /* Controller */,
+				4B9586181D3D0E2500ED22BD /* Model */,
+				4B9586191D3D0E2500ED22BD /* View */,
+			);
+			path = "音乐搜索";
+			sourceTree = "<group>";
+		};
+		4B9586171D3D0E2500ED22BD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4B95861D1D3D137A00ED22BD /* MusicSearchViewController.h */,
+				4B95861E1D3D137A00ED22BD /* MusicSearchViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4B9586181D3D0E2500ED22BD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4B9586201D3D283500ED22BD /* ModelOfMusicSearch.h */,
+				4B9586211D3D283500ED22BD /* ModelOfMusicSearch.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4B9586191D3D0E2500ED22BD /* View */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -943,18 +1037,21 @@
 				4B9584A11D38902100ED22BD /* MyCommonView.m in Sources */,
 				4B9585B01D3A56E900ED22BD /* MyPlayView.m in Sources */,
 				4B9585761D391C6E00ED22BD /* MusicOfTjGeDanCollectionViewCell.m in Sources */,
+				4B9586141D3CCC2800ED22BD /* DetailTableViewCell.m in Sources */,
 				4B9585671D39102D00ED22BD /* MusicOfDayTableViewCell.m in Sources */,
 				4B9585341D38C30E00ED22BD /* NCMusicEngine.m in Sources */,
 				4B9585241D38C30E00ED22BD /* AFHTTPRequestOperationManager.m in Sources */,
 				4B9584B11D38BA9500ED22BD /* MyDetailBaseViewController.m in Sources */,
 				4B95854E1D38CD4D00ED22BD /* MusicRankingListViewController.m in Sources */,
 				4B9585881D39306700ED22BD /* ModelOfTjItems.m in Sources */,
+				4B9586151D3CCC2800ED22BD /* HeadVIew.m in Sources */,
 				4B95859C1D3A10E700ED22BD /* MusicPlayerViewController.m in Sources */,
 				4B9585311D38C30E00ED22BD /* UIProgressView+AFNetworking.m in Sources */,
 				4B95854B1D38CCA800ED22BD /* MusicViewController.m in Sources */,
 				4B95852E1D38C30E00ED22BD /* UIAlertView+AFNetworking.m in Sources */,
 				4B9585A61D3A246900ED22BD /* MyCurrentSongTableViewCell.m in Sources */,
 				4B95855D1D38E04800ED22BD /* MusicRecommendTableView.m in Sources */,
+				4B95861F1D3D137A00ED22BD /* MusicSearchViewController.m in Sources */,
 				4B9584A61D38916800ED22BD /* RootTabBarViewController.m in Sources */,
 				4B95852C1D38C30E00ED22BD /* AFURLSessionManager.m in Sources */,
 				4B95852F1D38C30E00ED22BD /* UIButton+AFNetworking.m in Sources */,
@@ -966,6 +1063,7 @@
 				4B9584C01D38BF2900ED22BD /* RequestManager.m in Sources */,
 				4B9585511D38CD5900ED22BD /* MusicListViewController.m in Sources */,
 				4B9585601D390C7700ED22BD /* ModelOfTjDAY.m in Sources */,
+				4B9586121D3CCC2800ED22BD /* DetailViewController.m in Sources */,
 				4B9585271D38C30E00ED22BD /* AFNetworkReachabilityManager.m in Sources */,
 				4B9585901D39D52300ED22BD /* MusicOfTjItemsDetailViewController.m in Sources */,
 				4B9584FA1D38C15400ED22BD /* AFDownloadRequestOperation.m in Sources */,
@@ -981,6 +1079,7 @@
 				4B9585321D38C30E00ED22BD /* UIRefreshControl+AFNetworking.m in Sources */,
 				4B9585481D38CC4400ED22BD /* MusicRecommendViewController.m in Sources */,
 				4B9585301D38C30E00ED22BD /* UIImageView+AFNetworking.m in Sources */,
+				4B9586221D3D283500ED22BD /* ModelOfMusicSearch.m in Sources */,
 				4B9585281D38C30E00ED22BD /* AFSecurityPolicy.m in Sources */,
 				4B95857A1D391F9D00ED22BD /* MusicOfTjGeDanCollectionView.m in Sources */,
 				4B9585231D38C30E00ED22BD /* AFHTTPRequestOperation.m in Sources */,
@@ -988,6 +1087,7 @@
 				4B9585251D38C30E00ED22BD /* AFHTTPSessionManager.m in Sources */,
 				4B9585841D39259B00ED22BD /* MusicOfTjLiveCollectionViewCell.m in Sources */,
 				4B95859F1D3A11F900ED22BD /* SongModel.m in Sources */,
+				4B9586131D3CCC2800ED22BD /* DetailMusicModel.m in Sources */,
 				4B9585A21D3A1FD300ED22BD /* MyCurrentSongView.m in Sources */,
 				4B9585541D38D9F400ED22BD /* CarouselView.m in Sources */,
 			);
