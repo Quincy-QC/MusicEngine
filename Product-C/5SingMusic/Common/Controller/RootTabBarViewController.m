@@ -8,6 +8,7 @@
 
 #import "RootTabBarViewController.h"
 #import "MusicViewController.h"
+#import "TQMusicianController.h"
 
 @interface RootTabBarViewController ()
 
@@ -25,7 +26,8 @@
 
 - (void)initVC {
     // 创建子标签
-    [self createControllersWithTitle:@"乐库" image:@"musicbox_normal.png" selectedImage:@"musicbox_press.png" className:[MusicViewController class]];
+    [self createControllersWithTitle:@"乐库" image:@"musicbox_normal" selectedImage:@"musicbox_press" className:[MusicViewController class]];
+    [self createControllersWithTitle:@"音乐人" image:@"musican_normal" selectedImage:@"musican_press" className:[TQMusicianController class]];
 }
 
 - (void)createControllersWithTitle:(NSString *)title image:(NSString *)image selectedImage:(NSString *)selectImage className:(Class)class {

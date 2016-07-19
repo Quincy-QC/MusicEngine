@@ -9,6 +9,7 @@
 #import "MyCommonBaseViewController.h"
 #import "MusicPlayerViewController.h"
 #import "MusicSearchViewController.h"
+#import "ChangeDataMusician.h"
 
 @interface MyCommonBaseViewController ()  <UIScrollViewDelegate>
 
@@ -105,6 +106,7 @@
 
 -(void)viewWillAppearByIndex:(NSInteger)index{
     UIViewController *vc =_VCArray[index];
+    [ChangeDataMusician shareInstance].buttonTitle = ((UIButton *)self.btnArray[index]).titleLabel.text;
     [vc viewWillAppear:YES];
 }
 

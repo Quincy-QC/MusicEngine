@@ -8,6 +8,7 @@
 
 #import "MusicSearchViewController.h"
 #import "ModelOfMusicSearch.h"
+#import "MusicPlayerViewController.h"
 
 @interface MusicSearchViewController () <UITableViewDelegate, UITableViewDataSource, UISearchResultsUpdating, UISearchBarDelegate, UISearchControllerDelegate>
 @property (nonatomic, strong) UISearchController *searchC;
@@ -61,6 +62,16 @@
     ModelOfMusicSearch *model = self.songArray[indexPath.row];
     cell.textLabel.text = model.songName;
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    ModelOfMusicSearch *model = self.songArray[indexPath.row];
+    MusicPlayerViewController *musicPlayerVC = [MusicPlayerViewController sharedMusicPlayerWithSongType:model.type songID:model.songId];
+    [self dismissViewControllerAnimated:YES completion:^{
+        [self dismissViewControllerAnimated:YES completion:^{
+            [self presentViewController:musicPlayerVC animated:YES completion:nil];
+        }];
+    }];
 }
 
 - (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {

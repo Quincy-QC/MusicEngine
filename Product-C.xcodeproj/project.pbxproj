@@ -79,6 +79,11 @@
 		4B9586151D3CCC2800ED22BD /* HeadVIew.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9586111D3CCC2800ED22BD /* HeadVIew.m */; };
 		4B95861F1D3D137A00ED22BD /* MusicSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B95861E1D3D137A00ED22BD /* MusicSearchViewController.m */; };
 		4B9586221D3D283500ED22BD /* ModelOfMusicSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9586211D3D283500ED22BD /* ModelOfMusicSearch.m */; };
+		4B9586311D3DD3BC00ED22BD /* MusicIanTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9586261D3DD3BC00ED22BD /* MusicIanTableViewCell.m */; };
+		4B9586321D3DD3BC00ED22BD /* MusicianViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9586281D3DD3BC00ED22BD /* MusicianViewController.m */; };
+		4B9586331D3DD3BC00ED22BD /* TQMusicianController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B95862A1D3DD3BC00ED22BD /* TQMusicianController.m */; };
+		4B9586341D3DD3BC00ED22BD /* RecommentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B95862D1D3DD3BC00ED22BD /* RecommentModel.m */; };
+		4B9586351D3DD3BC00ED22BD /* ChangeDataMusician.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9586301D3DD3BC00ED22BD /* ChangeDataMusician.m */; };
 		D9968E00CCBB31ED97485013 /* libPods-Product-C.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 981E6FFBF859AF0D466F6DAA /* libPods-Product-C.a */; };
 /* End PBXBuildFile section */
 
@@ -239,6 +244,16 @@
 		4B95861E1D3D137A00ED22BD /* MusicSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicSearchViewController.m; sourceTree = "<group>"; };
 		4B9586201D3D283500ED22BD /* ModelOfMusicSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelOfMusicSearch.h; sourceTree = "<group>"; };
 		4B9586211D3D283500ED22BD /* ModelOfMusicSearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelOfMusicSearch.m; sourceTree = "<group>"; };
+		4B9586251D3DD3BC00ED22BD /* MusicIanTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicIanTableViewCell.h; sourceTree = "<group>"; };
+		4B9586261D3DD3BC00ED22BD /* MusicIanTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicIanTableViewCell.m; sourceTree = "<group>"; };
+		4B9586271D3DD3BC00ED22BD /* MusicianViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicianViewController.h; sourceTree = "<group>"; };
+		4B9586281D3DD3BC00ED22BD /* MusicianViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicianViewController.m; sourceTree = "<group>"; };
+		4B9586291D3DD3BC00ED22BD /* TQMusicianController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TQMusicianController.h; sourceTree = "<group>"; };
+		4B95862A1D3DD3BC00ED22BD /* TQMusicianController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TQMusicianController.m; sourceTree = "<group>"; };
+		4B95862C1D3DD3BC00ED22BD /* RecommentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommentModel.h; sourceTree = "<group>"; };
+		4B95862D1D3DD3BC00ED22BD /* RecommentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommentModel.m; sourceTree = "<group>"; };
+		4B95862F1D3DD3BC00ED22BD /* ChangeDataMusician.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangeDataMusician.h; sourceTree = "<group>"; };
+		4B9586301D3DD3BC00ED22BD /* ChangeDataMusician.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangeDataMusician.m; sourceTree = "<group>"; };
 		679C83CDB27C4A9442A6D0ED /* Pods-Product-C.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Product-C.release.xcconfig"; path = "Pods/Target Support Files/Pods-Product-C/Pods-Product-C.release.xcconfig"; sourceTree = "<group>"; };
 		8CD8B11ADA76D3D49EE27490 /* Pods-Product-C.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Product-C.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Product-C/Pods-Product-C.debug.xcconfig"; sourceTree = "<group>"; };
 		981E6FFBF859AF0D466F6DAA /* libPods-Product-C.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Product-C.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -357,6 +372,7 @@
 			children = (
 				4B9585351D38CBE200ED22BD /* 乐库 */,
 				4B9586161D3D0E2500ED22BD /* 音乐搜索 */,
+				4B9586231D3DD3BC00ED22BD /* 音乐人 */,
 				4B9585911D3A105900ED22BD /* 各种详情 */,
 				4B9584831D38902100ED22BD /* Common */,
 			);
@@ -842,6 +858,47 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		4B9586231D3DD3BC00ED22BD /* 音乐人 */ = {
+			isa = PBXGroup;
+			children = (
+				4B9586241D3DD3BC00ED22BD /* Controller */,
+				4B95862B1D3DD3BC00ED22BD /* Model */,
+				4B95862E1D3DD3BC00ED22BD /* View */,
+			);
+			path = "音乐人";
+			sourceTree = "<group>";
+		};
+		4B9586241D3DD3BC00ED22BD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4B9586251D3DD3BC00ED22BD /* MusicIanTableViewCell.h */,
+				4B9586261D3DD3BC00ED22BD /* MusicIanTableViewCell.m */,
+				4B9586271D3DD3BC00ED22BD /* MusicianViewController.h */,
+				4B9586281D3DD3BC00ED22BD /* MusicianViewController.m */,
+				4B9586291D3DD3BC00ED22BD /* TQMusicianController.h */,
+				4B95862A1D3DD3BC00ED22BD /* TQMusicianController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4B95862B1D3DD3BC00ED22BD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4B95862C1D3DD3BC00ED22BD /* RecommentModel.h */,
+				4B95862D1D3DD3BC00ED22BD /* RecommentModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4B95862E1D3DD3BC00ED22BD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4B95862F1D3DD3BC00ED22BD /* ChangeDataMusician.h */,
+				4B9586301D3DD3BC00ED22BD /* ChangeDataMusician.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1063,12 +1120,16 @@
 				4B9584C01D38BF2900ED22BD /* RequestManager.m in Sources */,
 				4B9585511D38CD5900ED22BD /* MusicListViewController.m in Sources */,
 				4B9585601D390C7700ED22BD /* ModelOfTjDAY.m in Sources */,
+				4B9586341D3DD3BC00ED22BD /* RecommentModel.m in Sources */,
 				4B9586121D3CCC2800ED22BD /* DetailViewController.m in Sources */,
 				4B9585271D38C30E00ED22BD /* AFNetworkReachabilityManager.m in Sources */,
 				4B9585901D39D52300ED22BD /* MusicOfTjItemsDetailViewController.m in Sources */,
 				4B9584FA1D38C15400ED22BD /* AFDownloadRequestOperation.m in Sources */,
 				4B95852B1D38C30E00ED22BD /* AFURLResponseSerialization.m in Sources */,
 				4B95858C1D3934C100ED22BD /* MusicOfTjItemsTableViewCell.m in Sources */,
+				4B9586311D3DD3BC00ED22BD /* MusicIanTableViewCell.m in Sources */,
+				4B9586351D3DD3BC00ED22BD /* ChangeDataMusician.m in Sources */,
+				4B9586321D3DD3BC00ED22BD /* MusicianViewController.m in Sources */,
 				4B95852A1D38C30E00ED22BD /* AFURLRequestSerialization.m in Sources */,
 				4B9585291D38C30E00ED22BD /* AFURLConnectionOperation.m in Sources */,
 				4B9585721D391AE400ED22BD /* ModelOfTjGeDan.m in Sources */,
@@ -1088,6 +1149,7 @@
 				4B9585841D39259B00ED22BD /* MusicOfTjLiveCollectionViewCell.m in Sources */,
 				4B95859F1D3A11F900ED22BD /* SongModel.m in Sources */,
 				4B9586131D3CCC2800ED22BD /* DetailMusicModel.m in Sources */,
+				4B9586331D3DD3BC00ED22BD /* TQMusicianController.m in Sources */,
 				4B9585A21D3A1FD300ED22BD /* MyCurrentSongView.m in Sources */,
 				4B9585541D38D9F400ED22BD /* CarouselView.m in Sources */,
 			);
