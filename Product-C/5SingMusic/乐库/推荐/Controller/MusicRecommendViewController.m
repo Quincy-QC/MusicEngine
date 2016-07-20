@@ -53,7 +53,7 @@
         self.modelArrayOfTjADV = [ModelOfTjADV modelConfiguredByJson:dic];
         // 刷新广告数据
         self.musicRecommendTV.modelArrayOfTjADV = self.modelArrayOfTjADV;
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"reloadTableView" object:nil];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"reloadTableView" object:@"0"];
     } error:^(NSError *error) {
         NSLog(@"error ========== %@", error);
     }];
@@ -65,7 +65,7 @@
         self.modelArrayOfTjDAY = [ModelOfTjDAY modelConfiguredByJson:dic];
         // 刷新每日推荐数据
         self.musicRecommendTV.modelArrayOfTjDAY = self.modelArrayOfTjDAY;
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"reloadTableView" object:nil];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"reloadTableView" object:@"1"];
     } error:^(NSError *error) {
         NSLog(@"error ========= %@", error);
     }];
@@ -77,7 +77,7 @@
         self.modelArrayOfTjGeDan = [ModelOfTjGeDan modelConfiguredByJson:dic];
         // 刷新推荐歌单数据
         self.musicRecommendTV.modelArrayOfTjGeDan = self.modelArrayOfTjGeDan;
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"reloadTableView" object:nil];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"reloadTableView" object:@"2"];
     } error:^(NSError *error) {
         NSLog(@"error ========= %@", error);
     }];
@@ -89,7 +89,7 @@
         self.modelArrayOfTjLive = [ModelOfTjLive modelConfiguredByJson:(NSArray *)dic];
         // 刷新推荐直播数据
         self.musicRecommendTV.modelArrayOfTjLive = self.modelArrayOfTjLive;
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"reloadTableView" object:nil];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"reloadTableView" object:@"3"];
     } error:^(NSError *error) {
         NSLog(@"error ======== %@", error);
     }];
@@ -101,7 +101,7 @@
         self.modelArrayOfTjItems = [ModelOfTjItems modelConfiguredByJson:dic];
         // 刷新推荐直播数据
         self.musicRecommendTV.modelArrayOfTjItems = self.modelArrayOfTjItems;
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"reloadTableView" object:nil];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"reloadTableView" object:@"4"];
     } error:^(NSError *error) {
         NSLog(@"error ======== %@", error);
     }];

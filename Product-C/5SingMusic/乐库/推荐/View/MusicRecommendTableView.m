@@ -18,13 +18,12 @@
 @end
 
 @implementation MusicRecommendTableView
-
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame style:(UITableViewStylePlain)];
     if (self) {
         self.delegate = self;
         self.dataSource = self;
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadTableView) name:@"reloadTableView" object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadTableView:) name:@"reloadTableView" object:nil];
         [self registerClass:[UITableViewCell class] forCellReuseIdentifier:@"reuse"];
         [self registerNib:[UINib nibWithNibName:@"MusicOfDayTableViewCell" bundle:nil] forCellReuseIdentifier:@"TjDay"];
         [self registerNib:[UINib nibWithNibName:@"MusicOfTjItemsTableViewCell" bundle:nil] forCellReuseIdentifier:@"TjItems"];
@@ -32,8 +31,11 @@
     return self;
 }
 
-- (void)reloadTableView {
-    [self reloadData];
+- (void)reloadTableView:(NSNotification *)notification {
+    NSString *object = notification.object;
+    NSNumber *objectNum = [[[NSNumberFormatter alloc] init] numberFromString:object];
+    NSInteger index = [objectNum integerValue];
+    [self reloadSections:[NSIndexSet indexSetWithIndex:index] withRowAnimation:(UITableViewRowAnimationAutomatic)];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -63,6 +65,7 @@
         }
         case 2: {
             UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"reuse" forIndexPath:indexPath];
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
             if (self.modelArrayOfTjGeDan) {
                 MusicOfTjGeDanCollectionView *tjGeDanCollectionView = [[MusicOfTjGeDanCollectionView alloc] initWithFrame:cell.bounds modelArray:self.modelArrayOfTjGeDan];
                 tjGeDanCollectionView.delegate = self;
@@ -72,6 +75,7 @@
         }
         case 3: {
             UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"reuse" forIndexPath:indexPath];
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
             if (self.modelArrayOfTjLive) {
                 MusicOfTjLiveCollectionView *tjLiveCollectionView = [[MusicOfTjLiveCollectionView alloc] initWithFrame:cell.bounds modelArray:self.modelArrayOfTjLive];
                 [cell.contentView addSubview:tjLiveCollectionView];
