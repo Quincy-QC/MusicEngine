@@ -10,8 +10,8 @@
 #import "DetailRankModel.h"
 #import "DetailTableViewCell.h"
 #import "MusicPlayerViewController.h"
-@interface DetailRankingViewController ()<UITableViewDataSource, UITableViewDelegate>
 
+@interface DetailRankingViewController ()<UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) UITableView *myTableView;
 @property (nonatomic, strong) NSMutableArray *listArray;

@@ -24,7 +24,6 @@
     [super viewDidLoad];
     [self requestDatasource];
     [self initMytableview];
-    
     // Do any additional setup after loading the view.
 }
 

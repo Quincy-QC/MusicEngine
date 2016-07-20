@@ -21,6 +21,14 @@
 		4B3432DC1D3F1E1B00986BB2 /* MusicListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3432D51D3F1E1B00986BB2 /* MusicListViewController.m */; };
 		4B3432DD1D3F1E1B00986BB2 /* MusicListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3432D81D3F1E1B00986BB2 /* MusicListModel.m */; };
 		4B3432DE1D3F1E1B00986BB2 /* MusicListCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3432DB1D3F1E1B00986BB2 /* MusicListCollectionViewCell.m */; };
+		4B34331F1D3F56D900986BB2 /* DynamicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3433061D3F56D900986BB2 /* DynamicViewController.m */; };
+		4B3433201D3F56D900986BB2 /* UNLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B34330A1D3F56D900986BB2 /* UNLoginView.m */; };
+		4B3433211D3F56D900986BB2 /* SquareiewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B34330E1D3F56D900986BB2 /* SquareiewController.m */; };
+		4B3433221D3F56D900986BB2 /* ModelOfSquare.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3433111D3F56D900986BB2 /* ModelOfSquare.m */; };
+		4B3433231D3F56D900986BB2 /* SquareTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3433141D3F56D900986BB2 /* SquareTableViewCell.m */; };
+		4B3433241D3F56D900986BB2 /* TQBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3433161D3F56D900986BB2 /* TQBtn.m */; };
+		4B3433251D3F56D900986BB2 /* DTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B34331A1D3F56D900986BB2 /* DTViewController.m */; };
+		4B3433261D3F56D900986BB2 /* SendDynamicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B34331C1D3F56D900986BB2 /* SendDynamicViewController.m */; };
 		4B9584511D3889B800ED22BD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9584501D3889B800ED22BD /* main.m */; };
 		4B9584541D3889B800ED22BD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9584531D3889B800ED22BD /* AppDelegate.m */; };
 		4B95845A1D3889B800ED22BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B9584581D3889B800ED22BD /* Main.storyboard */; };
@@ -142,6 +150,22 @@
 		4B3432D81D3F1E1B00986BB2 /* MusicListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicListModel.m; sourceTree = "<group>"; };
 		4B3432DA1D3F1E1B00986BB2 /* MusicListCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicListCollectionViewCell.h; sourceTree = "<group>"; };
 		4B3432DB1D3F1E1B00986BB2 /* MusicListCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicListCollectionViewCell.m; sourceTree = "<group>"; };
+		4B3433051D3F56D900986BB2 /* DynamicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamicViewController.h; sourceTree = "<group>"; };
+		4B3433061D3F56D900986BB2 /* DynamicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynamicViewController.m; sourceTree = "<group>"; };
+		4B3433091D3F56D900986BB2 /* UNLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNLoginView.h; sourceTree = "<group>"; };
+		4B34330A1D3F56D900986BB2 /* UNLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNLoginView.m; sourceTree = "<group>"; };
+		4B34330D1D3F56D900986BB2 /* SquareiewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SquareiewController.h; sourceTree = "<group>"; };
+		4B34330E1D3F56D900986BB2 /* SquareiewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SquareiewController.m; sourceTree = "<group>"; };
+		4B3433101D3F56D900986BB2 /* ModelOfSquare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelOfSquare.h; sourceTree = "<group>"; };
+		4B3433111D3F56D900986BB2 /* ModelOfSquare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelOfSquare.m; sourceTree = "<group>"; };
+		4B3433131D3F56D900986BB2 /* SquareTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SquareTableViewCell.h; sourceTree = "<group>"; };
+		4B3433141D3F56D900986BB2 /* SquareTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SquareTableViewCell.m; sourceTree = "<group>"; };
+		4B3433151D3F56D900986BB2 /* TQBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TQBtn.h; sourceTree = "<group>"; };
+		4B3433161D3F56D900986BB2 /* TQBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TQBtn.m; sourceTree = "<group>"; };
+		4B3433191D3F56D900986BB2 /* DTViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTViewController.h; sourceTree = "<group>"; };
+		4B34331A1D3F56D900986BB2 /* DTViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTViewController.m; sourceTree = "<group>"; };
+		4B34331B1D3F56D900986BB2 /* SendDynamicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendDynamicViewController.h; sourceTree = "<group>"; };
+		4B34331C1D3F56D900986BB2 /* SendDynamicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendDynamicViewController.m; sourceTree = "<group>"; };
 		4B95844C1D3889B800ED22BD /* Product-C.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Product-C.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B9584501D3889B800ED22BD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4B9584521D3889B800ED22BD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -442,6 +466,125 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		4B3433021D3F56D900986BB2 /* 动态 */ = {
+			isa = PBXGroup;
+			children = (
+				4B3433031D3F56D900986BB2 /* 动态 */,
+				4B34330B1D3F56D900986BB2 /* 广场 */,
+				4B3433171D3F56D900986BB2 /* 通用 */,
+			);
+			path = "动态";
+			sourceTree = "<group>";
+		};
+		4B3433031D3F56D900986BB2 /* 动态 */ = {
+			isa = PBXGroup;
+			children = (
+				4B3433041D3F56D900986BB2 /* Controller */,
+				4B3433071D3F56D900986BB2 /* Model */,
+				4B3433081D3F56D900986BB2 /* View */,
+			);
+			path = "动态";
+			sourceTree = "<group>";
+		};
+		4B3433041D3F56D900986BB2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4B3433051D3F56D900986BB2 /* DynamicViewController.h */,
+				4B3433061D3F56D900986BB2 /* DynamicViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4B3433071D3F56D900986BB2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4B3433081D3F56D900986BB2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4B3433091D3F56D900986BB2 /* UNLoginView.h */,
+				4B34330A1D3F56D900986BB2 /* UNLoginView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4B34330B1D3F56D900986BB2 /* 广场 */ = {
+			isa = PBXGroup;
+			children = (
+				4B34330C1D3F56D900986BB2 /* Controller */,
+				4B34330F1D3F56D900986BB2 /* Model */,
+				4B3433121D3F56D900986BB2 /* View */,
+			);
+			path = "广场";
+			sourceTree = "<group>";
+		};
+		4B34330C1D3F56D900986BB2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4B34330D1D3F56D900986BB2 /* SquareiewController.h */,
+				4B34330E1D3F56D900986BB2 /* SquareiewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4B34330F1D3F56D900986BB2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4B3433101D3F56D900986BB2 /* ModelOfSquare.h */,
+				4B3433111D3F56D900986BB2 /* ModelOfSquare.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4B3433121D3F56D900986BB2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4B3433131D3F56D900986BB2 /* SquareTableViewCell.h */,
+				4B3433141D3F56D900986BB2 /* SquareTableViewCell.m */,
+				4B3433151D3F56D900986BB2 /* TQBtn.h */,
+				4B3433161D3F56D900986BB2 /* TQBtn.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4B3433171D3F56D900986BB2 /* 通用 */ = {
+			isa = PBXGroup;
+			children = (
+				4B3433181D3F56D900986BB2 /* Controller */,
+				4B34331D1D3F56D900986BB2 /* Model */,
+				4B34331E1D3F56D900986BB2 /* View */,
+			);
+			path = "通用";
+			sourceTree = "<group>";
+		};
+		4B3433181D3F56D900986BB2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4B3433191D3F56D900986BB2 /* DTViewController.h */,
+				4B34331A1D3F56D900986BB2 /* DTViewController.m */,
+				4B34331B1D3F56D900986BB2 /* SendDynamicViewController.h */,
+				4B34331C1D3F56D900986BB2 /* SendDynamicViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4B34331D1D3F56D900986BB2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4B34331E1D3F56D900986BB2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		4B9584431D3889B700ED22BD = {
 			isa = PBXGroup;
 			children = (
@@ -512,6 +655,7 @@
 			children = (
 				4B9585351D38CBE200ED22BD /* 乐库 */,
 				4B9586231D3DD3BC00ED22BD /* 音乐人 */,
+				4B3433021D3F56D900986BB2 /* 动态 */,
 				4B9586361D3E1B9600ED22BD /* 我的 */,
 				4B95863A1D3E1B9600ED22BD /* 注册与登录 */,
 				4B9586161D3D0E2500ED22BD /* 音乐搜索 */,
@@ -1221,6 +1365,7 @@
 				4B9584A11D38902100ED22BD /* MyCommonView.m in Sources */,
 				4B9585B01D3A56E900ED22BD /* MyPlayView.m in Sources */,
 				4B9585761D391C6E00ED22BD /* MusicOfTjGeDanCollectionViewCell.m in Sources */,
+				4B34331F1D3F56D900986BB2 /* DynamicViewController.m in Sources */,
 				4B9586141D3CCC2800ED22BD /* DetailTableViewCell.m in Sources */,
 				4B3432DD1D3F1E1B00986BB2 /* MusicListModel.m in Sources */,
 				4B9585671D39102D00ED22BD /* MusicOfDayTableViewCell.m in Sources */,
@@ -1234,11 +1379,13 @@
 				4B95854B1D38CCA800ED22BD /* MusicViewController.m in Sources */,
 				4B95852E1D38C30E00ED22BD /* UIAlertView+AFNetworking.m in Sources */,
 				4B9585A61D3A246900ED22BD /* MyCurrentSongTableViewCell.m in Sources */,
+				4B3433221D3F56D900986BB2 /* ModelOfSquare.m in Sources */,
 				4B3431FC1D3E229400986BB2 /* LoginViewController.m in Sources */,
 				4B95855D1D38E04800ED22BD /* MusicRecommendTableView.m in Sources */,
 				4B95861F1D3D137A00ED22BD /* MusicSearchViewController.m in Sources */,
 				4B3432D11D3F1D3C00986BB2 /* MusicRankListTableViewCell.m in Sources */,
 				4B9584A61D38916800ED22BD /* RootTabBarViewController.m in Sources */,
+				4B3433231D3F56D900986BB2 /* SquareTableViewCell.m in Sources */,
 				4B95852C1D38C30E00ED22BD /* AFURLSessionManager.m in Sources */,
 				4B3432CD1D3F1D3C00986BB2 /* DetailRankingViewController.m in Sources */,
 				4B95852F1D38C30E00ED22BD /* UIButton+AFNetworking.m in Sources */,
@@ -1258,6 +1405,8 @@
 				4B95852B1D38C30E00ED22BD /* AFURLResponseSerialization.m in Sources */,
 				4B95858C1D3934C100ED22BD /* MusicOfTjItemsTableViewCell.m in Sources */,
 				4B9586311D3DD3BC00ED22BD /* MusicIanTableViewCell.m in Sources */,
+				4B3433211D3F56D900986BB2 /* SquareiewController.m in Sources */,
+				4B3433261D3F56D900986BB2 /* SendDynamicViewController.m in Sources */,
 				4B9586351D3DD3BC00ED22BD /* ChangeDataMusician.m in Sources */,
 				4B9586321D3DD3BC00ED22BD /* MusicianViewController.m in Sources */,
 				4B95852A1D38C30E00ED22BD /* AFURLRequestSerialization.m in Sources */,
@@ -1270,12 +1419,14 @@
 				4B9584511D3889B800ED22BD /* main.m in Sources */,
 				4B9584AB1D38B4D900ED22BD /* MyBaseViewController.m in Sources */,
 				4B9585321D38C30E00ED22BD /* UIRefreshControl+AFNetworking.m in Sources */,
+				4B3433201D3F56D900986BB2 /* UNLoginView.m in Sources */,
 				4B9585481D38CC4400ED22BD /* MusicRecommendViewController.m in Sources */,
 				4B3432CE1D3F1D3C00986BB2 /* MusicRankingListViewController.m in Sources */,
 				4B9585301D38C30E00ED22BD /* UIImageView+AFNetworking.m in Sources */,
 				4B9586221D3D283500ED22BD /* ModelOfMusicSearch.m in Sources */,
 				4B3432DE1D3F1E1B00986BB2 /* MusicListCollectionViewCell.m in Sources */,
 				4B9585281D38C30E00ED22BD /* AFSecurityPolicy.m in Sources */,
+				4B3433251D3F56D900986BB2 /* DTViewController.m in Sources */,
 				4B95857A1D391F9D00ED22BD /* MusicOfTjGeDanCollectionView.m in Sources */,
 				4B9585231D38C30E00ED22BD /* AFHTTPRequestOperation.m in Sources */,
 				4B9585261D38C30E00ED22BD /* AFNetworkActivityIndicatorManager.m in Sources */,
@@ -1285,6 +1436,7 @@
 				4B9586131D3CCC2800ED22BD /* DetailMusicModel.m in Sources */,
 				4B9586331D3DD3BC00ED22BD /* TQMusicianController.m in Sources */,
 				4B9585A21D3A1FD300ED22BD /* MyCurrentSongView.m in Sources */,
+				4B3433241D3F56D900986BB2 /* TQBtn.m in Sources */,
 				4B9585541D38D9F400ED22BD /* CarouselView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

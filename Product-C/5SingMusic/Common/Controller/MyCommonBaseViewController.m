@@ -10,6 +10,7 @@
 #import "MusicPlayerViewController.h"
 #import "MusicSearchViewController.h"
 #import "ChangeDataMusician.h"
+#import "SendDynamicViewController.h"
 
 @interface MyCommonBaseViewController ()  <UIScrollViewDelegate>
 
@@ -127,8 +128,11 @@
 }
 
 -(void)write:(UIButton *)sender{
-    NSLog(@"没接口怎么办");
+    SendDynamicViewController *sendVC = [[SendDynamicViewController alloc] init];
+    UINavigationController *navC = [[UINavigationController alloc] initWithRootViewController:sendVC];
+    [self presentViewController:navC animated:YES completion:nil];
 }
+
 #pragma mark --rightBtn点击事件
 -(void)listenMusic:(UIButton *)sender{
     MusicPlayerViewController *musicPlayerVC = [MusicPlayerViewController sharedMusicPlayerWithSongType:nil songID:nil];
