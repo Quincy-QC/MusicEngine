@@ -70,7 +70,13 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+    SongModel *model = self.songArray[indexPath.row];
+    MusicPlayerViewController *musicPlayerVC = [MusicPlayerViewController sharedMusicPlayerWithSongType:nil songID:nil];
+    musicPlayerVC.songID = model.ID;
+    musicPlayerVC.songType = model.SK;
+    if (musicPlayerVC.songType && musicPlayerVC.songID) {
+        [musicPlayerVC createDataWithType:@"1"];
+    }
 }
 
 -(void)ConfigMyViewWithArray:(NSArray *)array{

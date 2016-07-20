@@ -16,7 +16,7 @@
 @property (nonatomic, strong) NSString *SW; // lyric
 @property (nonatomic, strong) NSString *M; // inspiration
 @property (nonatomic, strong) NSString *SK; // type
-@property (nonatomic, strong) NSString *UID; // id
+@property (nonatomic, strong) NSString *ID; // id
 
 + (SongModel *)modelConfiguredByJson:(NSDictionary *)dic;
 

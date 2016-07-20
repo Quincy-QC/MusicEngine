@@ -10,13 +10,13 @@
 
 @interface DetailMusicModel : NSObject
 
-@property (nonatomic,strong)NSString *C;//描述
-@property (nonatomic,strong)NSString *L;//类型
-@property (nonatomic,strong)NSString *ID;//
-@property (nonatomic,strong)NSString *P;//图片
-@property (nonatomic,strong)NSDictionary *user;
-@property (nonatomic, strong)NSString *SN;
-@property (nonatomic, strong)NSString *NN;
+@property (nonatomic,strong) NSString *C;//描述
+@property (nonatomic,strong) NSString *L;//类型
+@property (nonatomic,strong) NSString *ID;//
+@property (nonatomic,strong) NSString *P;//图片
+@property (nonatomic,strong) NSDictionary *user;
+@property (nonatomic, strong) NSString *SN;
+@property (nonatomic, strong) NSString *NN;
 @property (nonatomic, strong) NSString *SK;
 
 

@@ -1,37 +1,35 @@
 //
-//  MusicViewController.m
+//  MineViewController.m
 //  Product-C
 //
-//  Created by UntilYou-QC on 16/7/15.
+//  Created by UntilYou-QC on 16/7/19.
 //  Copyright © 2016年 UntilYou-QC. All rights reserved.
 //
 
-#import "MusicViewController.h"
-#import "MusicRecommendViewController.h"
-#import "MusicListViewController.h"
-#import "MusicRankingListViewController.h"
+#import "MineViewController.h"
+#import "LoginAndRegistView.h"
 
-@interface MusicViewController ()
+@interface MineViewController ()
 
 @end
 
-@implementation MusicViewController
+@implementation MineViewController
 
 - (instancetype)init {
     self = [super init];
     if (self) {
         self.leftBtnType = @"search";
-        self.btnTitleArray = [[NSMutableArray alloc] initWithArray:@[@"推荐", @"歌单", @"排行版"]];
-        self.vcClassArray = [[NSMutableArray alloc] initWithArray:@[[MusicRecommendViewController class], [MusicListViewController class], [MusicRankingListViewController class]]];
+        self.btnTitleArray = [@[@"我的"] mutableCopy];
     }
     return self;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    for (MyBaseViewController *vc in self.VCArray) {
-        vc.myParentVC = self;
-    }
+    LoginAndRegistView *loginAndRegistView = [[[NSBundle mainBundle] loadNibNamed:@"LoginAndRegistView" owner:self options:nil] firstObject];
+    loginAndRegistView.frame = CGRectMake(0, 64, KScreenW, KScreenH - 64 - 49);
+    loginAndRegistView.MyParentVC = (MyBaseViewController *)self;
+    [self.view addSubview:loginAndRegistView];
 }
 
 - (void)didReceiveMemoryWarning {

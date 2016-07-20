@@ -35,7 +35,26 @@
 - (void)initheadview{
     _headview =[[HeadVIew alloc]initWithFrame:CGRectMake(0, 0, KScreenW, 200)];
     _headview.MyParentVC = self;
-    
+    [_headview.bfBtn addTarget:self action:@selector(playAll) forControlEvents:(UIControlEventTouchUpInside)];
+}
+
+- (void)playAll {
+    if (self.listArray.count > 0) {
+        MusicPlayerViewController *musicPlayerVC = [MusicPlayerViewController sharedMusicPlayerWithSongType:nil songID:nil];
+        for (NSInteger i = self.listArray.count - 1; i >= 0; i--) {
+            DetailMusicModel *model = self.listArray[i];
+            if (i == 0) {
+                musicPlayerVC.songType = model.SK;
+                musicPlayerVC.songID = model.ID;
+                if (musicPlayerVC.songID && musicPlayerVC.songID) {
+                    [musicPlayerVC createDataWithType:@"2"];
+                }
+            } else {
+                [musicPlayerVC.songArray insertObject:model atIndex:0];
+            }
+        }
+        [self.navigationController pushViewController:musicPlayerVC animated:YES];
+    }
 }
 
 - (void)initMytableview{
@@ -49,22 +68,34 @@
 }
 
 - (void)requestheadViewDatasource{
+    [SVProgressHUD show];
     [RequestManager requestWithUrlString:[NSString stringWithFormat:GEDAN_TOP, _listID] requestType:(requestGET) parDic:nil finish:^(NSData *data) {
         NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:(NSJSONReadingMutableContainers) error:nil];
         NSDictionary *dicc = dic[@"data"];
         DetailMusicModel *model = [DetailMusicModel initWithDict:dicc];
         _headview.model = model;
+        
+        [SVProgressHUD showSuccessWithStatus:@"加载成功"];
+        [SVProgressHUD dismissWithDelay:0.3];
     } error:^(NSError *error) {
+        [SVProgressHUD showErrorWithStatus:@"加载失败"];
+        [SVProgressHUD dismissWithDelay:0.3];
         NSLog(@"error ======== %@", error);
     }];
 }
 
 - (void)requestTableviewDatasource{
+    [SVProgressHUD show];
     [RequestManager requestWithUrlString:[NSString stringWithFormat:GEDAN_DETAIL, _listID] requestType:(requestGET) parDic:nil finish:^(NSData *data) {
         NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:(NSJSONReadingMutableContainers) error:nil];
         _listArray = [DetailMusicModel scrollModelConfigureWithJsonDic:dic];
         [_myTableview reloadData];
+        
+        [SVProgressHUD showSuccessWithStatus:@"加载成功"];
+        [SVProgressHUD dismissWithDelay:0.3];
     } error:^(NSError *error) {
+        [SVProgressHUD showErrorWithStatus:@"加载失败"];
+        [SVProgressHUD dismissWithDelay:0.3];
         NSLog(@"error ======== %@", error);
     }];
 }

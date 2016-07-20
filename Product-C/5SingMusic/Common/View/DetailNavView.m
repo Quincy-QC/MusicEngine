@@ -7,6 +7,8 @@
 //
 
 #import "DetailNavView.h"
+#import "MusicPlayerViewController.h"
+
 @implementation DetailNavView
 
 - (id)initWithFrame:(CGRect)frame
@@ -34,10 +36,10 @@
 
 }
 #pragma mark --rightBtn点击事件
-//-(void)listenMusic:(UIButton *)sender{
-//    PlayMusicController *play =[PlayMusicController sharePlayMusicViewWithSongType:NULL AndSongId:NULL];
-//    [self.MyParentVC.navigationController pushViewController:play animated:YES];
-//}
+-(void)listenMusic:(UIButton *)sender{
+    MusicPlayerViewController *musicPlayerVC = [MusicPlayerViewController sharedMusicPlayerWithSongType:nil songID:nil];
+    [self.MyParentVC.navigationController pushViewController:musicPlayerVC animated:YES];
+}
 -(void)back:(UIButton *)sender{
     [self.MyParentVC.navigationController popViewControllerAnimated:YES];
 }

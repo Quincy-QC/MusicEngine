@@ -10,7 +10,7 @@
 
 @interface RecommentModel : NSObject
 @property (nonatomic,strong)NSString *I;
-@property (nonatomic,strong)NSNumber *ID;
+//@property (nonatomic,strong)NSString *ID;
 @property (nonatomic,strong)NSString *M;
 @property (nonatomic,strong)NSString *NN;
 @property (nonatomic,strong)NSNumber *FCRQ;

@@ -13,6 +13,7 @@
 #import "RecommentModel.h"
 #import "MyCommonBaseViewController.h"
 #import "ChangeDataMusician.h"
+#import "MusicPlayerViewController.h"
 
 
 @interface MusicianViewController ()<UITableViewDataSource, UITableViewDelegate>
@@ -38,15 +39,17 @@
 }
 
 - (void)updataSource {
-    
+    [SVProgressHUD show];
     [RequestManager requestWithUrlString:self.URL requestType:(requestGET) parDic:nil finish:^(NSData *data) {
         NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:(NSJSONReadingMutableContainers) error:nil];
         self.modelArray = [RecommentModel modelConfigureJsonDic:dic];
         [self.tableView reloadData];
         
         [SVProgressHUD showSuccessWithStatus:@"加载成功"];
-        
+        [SVProgressHUD dismissWithDelay:0.3];
     } error:^(NSError *error) {
+        [SVProgressHUD showErrorWithStatus:@"加载失败"];
+        [SVProgressHUD dismissWithDelay:0.3];
         NSLog(@"error ========= %@", error);
     }];
 }
@@ -92,12 +95,16 @@
     MusicIanTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"musciCell" forIndexPath:indexPath];
     RecommentModel *model = self.modelArray[indexPath.row];
     cell.model = model;
-    [cell.playButton addTarget:self action:@selector(playAction) forControlEvents:(UIControlEventTouchUpInside)];
+    [cell.playButton addTarget:self action:@selector(playAction:) forControlEvents:(UIControlEventTouchUpInside)];
     return cell;
 }
 
-- (void)playAction {
-    
+- (void)playAction:(UIButton *)sender {
+    MusicIanTableViewCell *cell = (MusicIanTableViewCell *)sender.superview.superview;
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+    RecommentModel *model = self.modelArray[indexPath.row];
+    MusicPlayerViewController *musicPlayerVC = [MusicPlayerViewController sharedMusicPlayerWithSongType:model.Song[@"SK"] songID:model.Song[@"ID"]];
+    [self.myParentVC.navigationController pushViewController:musicPlayerVC animated:YES];
 }
 
 

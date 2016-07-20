@@ -14,15 +14,12 @@
 #import "SongModel.h"
 
 @interface MusicPlayerViewController () <UIScrollViewDelegate>
-@property (nonatomic, strong) NSString *songType;
-@property (nonatomic, strong) NSString *songID;
 @property (nonatomic, strong) UIImageView *imageV;
 @property (nonatomic, strong) UIScrollView *scrollV;
 @property (nonatomic, strong) MyCurrentSongView *myCurrentSongV;
 @property (nonatomic, strong) MyLyricView *myLyricV;
 @property (nonatomic, strong) MyInspirationView *myInspirationV;
 @property (nonatomic, strong) MyPlayView *myPlayV;
-@property (nonatomic, strong) NSMutableArray *songArray;
 @property (nonatomic, assign) NSInteger myPlayIndex;
 @property (nonatomic, strong) SongModel *songModel;
 
@@ -38,6 +35,15 @@
     vc.songType = type;
     vc.songID = songID;
     if (vc.songType && vc.songID) {
+        if (vc.songModel.ID == vc.songID) {
+            return vc;
+        }
+        for (SongModel *model in vc.songArray) {
+            if (model.ID == vc.songID) {
+                [vc createDataWithType:@"1"];
+                return vc;
+            }
+        }
         [vc createDataWithType:@"2"];
     }
     return vc;
@@ -191,7 +197,7 @@
     }
     SongModel *model = self.songArray[self.myPlayIndex];
     self.songType = model.SK;
-    self.songID = model.UID;
+    self.songID = model.ID;
     [self createDataWithType:@"1"];
 }
 
@@ -202,7 +208,7 @@
     }
     SongModel *model = self.songArray[self.myPlayIndex];
     self.songType = model.SK;
-    self.songID = model.UID;
+    self.songID = model.ID;
     [self createDataWithType:@"1"];
 }
 

@@ -69,7 +69,7 @@
     MusicPlayerViewController *musicPlayerVC = [MusicPlayerViewController sharedMusicPlayerWithSongType:model.type songID:model.songId];
     [self dismissViewControllerAnimated:YES completion:^{
         [self dismissViewControllerAnimated:YES completion:^{
-            [self presentViewController:musicPlayerVC animated:YES completion:nil];
+//            [self presentViewController:musicPlayerVC animated:YES completion:nil];
         }];
     }];
 }
@@ -96,6 +96,7 @@
         NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
         self.songArray = [ModelOfMusicSearch modelConfiguredByJson:dic];
         [self.searchResultsTV reloadData];
+        [SVProgressHUD showInfoWithStatus:@"加载完成"];
         [SVProgressHUD dismissWithDelay:0.3];
     } error:^(NSError *error) {
         [SVProgressHUD dismissWithDelay:0.3];
