@@ -7,9 +7,10 @@
 //
 
 #import "DynamicViewController.h"
+#import "LoginAndRegistView.h"
 
 @interface DynamicViewController ()
-
+@property (nonatomic, strong) LoginAndRegistView *loginAndRegistView;
 @end
 
 @implementation DynamicViewController
@@ -31,10 +32,15 @@
     [self createUI];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    self.loginAndRegistView.MyParentVC = (MyBaseViewController *)self.myParentVC;
+    [super viewWillAppear:animated];
+}
+
 - (void)createUI {
-    self.unLoginView = [[UNLoginView alloc] initWithFrame:CGRectMake(0, 0, KScreenW, KScreenH)];
-    self.unLoginView.MyParentVC = self;
-    [self.view addSubview:self.unLoginView];
+    self.loginAndRegistView = [[[NSBundle mainBundle] loadNibNamed:@"LoginAndRegistView" owner:self options:nil] firstObject];
+    self.loginAndRegistView.frame = CGRectMake(0, -64, KScreenW, KScreenH);
+    [self.view addSubview:self.loginAndRegistView];
 }
 
 

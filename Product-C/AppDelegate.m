@@ -9,6 +9,9 @@
 #import "AppDelegate.h"
 #import "RootTabBarViewController.h"
 
+NSString *const appKey = @"152cb17c85948";
+NSString *const appSecret = @"3f3d4d766ed10033b3d5a9b786b1cb57";
+
 @interface AppDelegate ()
 
 @end
@@ -22,6 +25,8 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     self.window.rootViewController = [[RootTabBarViewController alloc] init];
+    // 注册SMSSDK
+    [SMSSDK registerApp:appKey withSecret:appSecret];
     
     return YES;
 }

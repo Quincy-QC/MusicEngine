@@ -7,14 +7,7 @@
 //
 
 #import "MyBaseViewController.h"
-#import "UNLoginView.h"
 
 @interface DynamicViewController : MyBaseViewController
-
-@property (nonatomic, strong) UIView *loginView;
-@property (nonatomic, strong) UNLoginView *unLoginView;
-
-
-
 
 @end

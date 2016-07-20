@@ -19,6 +19,7 @@
 #import <Masonry.h>
 #import <UIImageView+WebCache.h>
 #import "MusicPlayerViewController.h"
+#import <SMS_SDK/SMSSDK.h>
 
 #define KRealValue(value) ((value)/414.0f*[UIScreen mainScreen].bounds.size.width)
 #define KScreenW [UIScreen mainScreen].bounds.size.width

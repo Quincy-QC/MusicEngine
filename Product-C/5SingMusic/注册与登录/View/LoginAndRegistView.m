@@ -8,6 +8,7 @@
 
 #import "LoginAndRegistView.h"
 #import "LoginViewController.h"
+#import "MessageLoginViewController.h"
 
 @implementation LoginAndRegistView
 
@@ -16,6 +17,10 @@
 }
 
 - (IBAction)RegistAction:(UIButton *)sender {
+}
+
+- (IBAction)messageRegistAction:(UIButton *)sender {
+    [self.MyParentVC.navigationController pushViewController:[[LoginViewController alloc] init] animated:YES];
 }
 
 @end

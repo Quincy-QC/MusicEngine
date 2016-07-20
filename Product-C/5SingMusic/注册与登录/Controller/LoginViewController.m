@@ -15,6 +15,10 @@
 @end
 
 @implementation LoginViewController
+- (instancetype)init {
+    self.hidesBottomBarWhenPushed = YES;
+    return [super init];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

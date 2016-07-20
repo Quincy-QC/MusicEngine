@@ -22,13 +22,15 @@
 		4B3432DD1D3F1E1B00986BB2 /* MusicListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3432D81D3F1E1B00986BB2 /* MusicListModel.m */; };
 		4B3432DE1D3F1E1B00986BB2 /* MusicListCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3432DB1D3F1E1B00986BB2 /* MusicListCollectionViewCell.m */; };
 		4B34331F1D3F56D900986BB2 /* DynamicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3433061D3F56D900986BB2 /* DynamicViewController.m */; };
-		4B3433201D3F56D900986BB2 /* UNLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B34330A1D3F56D900986BB2 /* UNLoginView.m */; };
 		4B3433211D3F56D900986BB2 /* SquareiewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B34330E1D3F56D900986BB2 /* SquareiewController.m */; };
 		4B3433221D3F56D900986BB2 /* ModelOfSquare.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3433111D3F56D900986BB2 /* ModelOfSquare.m */; };
 		4B3433231D3F56D900986BB2 /* SquareTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3433141D3F56D900986BB2 /* SquareTableViewCell.m */; };
 		4B3433241D3F56D900986BB2 /* TQBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3433161D3F56D900986BB2 /* TQBtn.m */; };
 		4B3433251D3F56D900986BB2 /* DTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B34331A1D3F56D900986BB2 /* DTViewController.m */; };
 		4B3433261D3F56D900986BB2 /* SendDynamicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B34331C1D3F56D900986BB2 /* SendDynamicViewController.m */; };
+		4B34332B1D3FA6F500986BB2 /* MessageLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3433291D3FA6F500986BB2 /* MessageLoginViewController.m */; };
+		4B34332C1D3FA6F500986BB2 /* MessageLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B34332A1D3FA6F500986BB2 /* MessageLoginViewController.xib */; };
+		4B34332F1D3FBB7E00986BB2 /* MyLoginSucessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B34332E1D3FBB7E00986BB2 /* MyLoginSucessViewController.m */; };
 		4B9584511D3889B800ED22BD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9584501D3889B800ED22BD /* main.m */; };
 		4B9584541D3889B800ED22BD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9584531D3889B800ED22BD /* AppDelegate.m */; };
 		4B95845A1D3889B800ED22BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B9584581D3889B800ED22BD /* Main.storyboard */; };
@@ -152,8 +154,6 @@
 		4B3432DB1D3F1E1B00986BB2 /* MusicListCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicListCollectionViewCell.m; sourceTree = "<group>"; };
 		4B3433051D3F56D900986BB2 /* DynamicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamicViewController.h; sourceTree = "<group>"; };
 		4B3433061D3F56D900986BB2 /* DynamicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynamicViewController.m; sourceTree = "<group>"; };
-		4B3433091D3F56D900986BB2 /* UNLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNLoginView.h; sourceTree = "<group>"; };
-		4B34330A1D3F56D900986BB2 /* UNLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNLoginView.m; sourceTree = "<group>"; };
 		4B34330D1D3F56D900986BB2 /* SquareiewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SquareiewController.h; sourceTree = "<group>"; };
 		4B34330E1D3F56D900986BB2 /* SquareiewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SquareiewController.m; sourceTree = "<group>"; };
 		4B3433101D3F56D900986BB2 /* ModelOfSquare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelOfSquare.h; sourceTree = "<group>"; };
@@ -166,6 +166,11 @@
 		4B34331A1D3F56D900986BB2 /* DTViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTViewController.m; sourceTree = "<group>"; };
 		4B34331B1D3F56D900986BB2 /* SendDynamicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendDynamicViewController.h; sourceTree = "<group>"; };
 		4B34331C1D3F56D900986BB2 /* SendDynamicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendDynamicViewController.m; sourceTree = "<group>"; };
+		4B3433281D3FA6F500986BB2 /* MessageLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageLoginViewController.h; sourceTree = "<group>"; };
+		4B3433291D3FA6F500986BB2 /* MessageLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageLoginViewController.m; sourceTree = "<group>"; };
+		4B34332A1D3FA6F500986BB2 /* MessageLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageLoginViewController.xib; sourceTree = "<group>"; };
+		4B34332D1D3FBB7E00986BB2 /* MyLoginSucessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLoginSucessViewController.h; sourceTree = "<group>"; };
+		4B34332E1D3FBB7E00986BB2 /* MyLoginSucessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLoginSucessViewController.m; sourceTree = "<group>"; };
 		4B95844C1D3889B800ED22BD /* Product-C.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Product-C.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B9584501D3889B800ED22BD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4B9584521D3889B800ED22BD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -367,6 +372,9 @@
 				4B3431F91D3E229400986BB2 /* LoginViewController.h */,
 				4B3431FA1D3E229400986BB2 /* LoginViewController.m */,
 				4B3431FB1D3E229400986BB2 /* LoginViewController.xib */,
+				4B3433281D3FA6F500986BB2 /* MessageLoginViewController.h */,
+				4B3433291D3FA6F500986BB2 /* MessageLoginViewController.m */,
+				4B34332A1D3FA6F500986BB2 /* MessageLoginViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -505,8 +513,6 @@
 		4B3433081D3F56D900986BB2 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				4B3433091D3F56D900986BB2 /* UNLoginView.h */,
-				4B34330A1D3F56D900986BB2 /* UNLoginView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1136,6 +1142,8 @@
 			children = (
 				4B95863E1D3E1C9A00ED22BD /* MineViewController.h */,
 				4B95863F1D3E1C9A00ED22BD /* MineViewController.m */,
+				4B34332D1D3FBB7E00986BB2 /* MyLoginSucessViewController.h */,
+				4B34332E1D3FBB7E00986BB2 /* MyLoginSucessViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1282,6 +1290,7 @@
 				4B3431FD1D3E229400986BB2 /* LoginViewController.xib in Resources */,
 				4B95845A1D3889B800ED22BD /* Main.storyboard in Resources */,
 				4B3432BE1D3F1BB400986BB2 /* left.png in Resources */,
+				4B34332C1D3FA6F500986BB2 /* MessageLoginViewController.xib in Resources */,
 				4B3432041D3E24B500986BB2 /* LoginAndRegistView.xib in Resources */,
 				4B95858D1D3934C100ED22BD /* MusicOfTjItemsTableViewCell.xib in Resources */,
 				4B9585851D39259B00ED22BD /* MusicOfTjLiveCollectionViewCell.xib in Resources */,
@@ -1379,6 +1388,7 @@
 				4B95854B1D38CCA800ED22BD /* MusicViewController.m in Sources */,
 				4B95852E1D38C30E00ED22BD /* UIAlertView+AFNetworking.m in Sources */,
 				4B9585A61D3A246900ED22BD /* MyCurrentSongTableViewCell.m in Sources */,
+				4B34332B1D3FA6F500986BB2 /* MessageLoginViewController.m in Sources */,
 				4B3433221D3F56D900986BB2 /* ModelOfSquare.m in Sources */,
 				4B3431FC1D3E229400986BB2 /* LoginViewController.m in Sources */,
 				4B95855D1D38E04800ED22BD /* MusicRecommendTableView.m in Sources */,
@@ -1391,6 +1401,7 @@
 				4B95852F1D38C30E00ED22BD /* UIButton+AFNetworking.m in Sources */,
 				4B9585801D39249800ED22BD /* ModelOfTjLive.m in Sources */,
 				4B95852D1D38C30E00ED22BD /* UIActivityIndicatorView+AFNetworking.m in Sources */,
+				4B34332F1D3FBB7E00986BB2 /* MyLoginSucessViewController.m in Sources */,
 				4B9584A01D38902100ED22BD /* DetailNavView.m in Sources */,
 				4B9585AD1D3A377E00ED22BD /* MyInspirationView.m in Sources */,
 				4B9585331D38C30E00ED22BD /* UIWebView+AFNetworking.m in Sources */,
@@ -1419,7 +1430,6 @@
 				4B9584511D3889B800ED22BD /* main.m in Sources */,
 				4B9584AB1D38B4D900ED22BD /* MyBaseViewController.m in Sources */,
 				4B9585321D38C30E00ED22BD /* UIRefreshControl+AFNetworking.m in Sources */,
-				4B3433201D3F56D900986BB2 /* UNLoginView.m in Sources */,
 				4B9585481D38CC4400ED22BD /* MusicRecommendViewController.m in Sources */,
 				4B3432CE1D3F1D3C00986BB2 /* MusicRankingListViewController.m in Sources */,
 				4B9585301D38C30E00ED22BD /* UIImageView+AFNetworking.m in Sources */,

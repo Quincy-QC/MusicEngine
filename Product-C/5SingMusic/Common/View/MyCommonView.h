@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "MyBaseViewController.h"
+
 @interface MyCommonView : UIView
-@property (nonatomic,strong)MyBaseViewController *MyParentVC;//我的父VC
+@property (nonatomic,strong) MyBaseViewController *MyParentVC;//我的父VC
 @end
