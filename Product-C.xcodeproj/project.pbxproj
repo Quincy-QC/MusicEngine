@@ -31,6 +31,12 @@
 		4B34332B1D3FA6F500986BB2 /* MessageLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3433291D3FA6F500986BB2 /* MessageLoginViewController.m */; };
 		4B34332C1D3FA6F500986BB2 /* MessageLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B34332A1D3FA6F500986BB2 /* MessageLoginViewController.xib */; };
 		4B34332F1D3FBB7E00986BB2 /* MyLoginSucessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B34332E1D3FBB7E00986BB2 /* MyLoginSucessViewController.m */; };
+		4B7FE2131D40F196006816B9 /* DownloadListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B7FE2121D40F196006816B9 /* DownloadListViewController.m */; };
+		4B7FE21B1D40F4F1006816B9 /* DownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B7FE2161D40F4F1006816B9 /* DownloadManager.m */; };
+		4B7FE21C1D40F4F1006816B9 /* NSString+Hash.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B7FE2181D40F4F1006816B9 /* NSString+Hash.m */; };
+		4B7FE21D1D40F4F1006816B9 /* SessionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B7FE21A1D40F4F1006816B9 /* SessionModel.m */; };
+		4B7FE2211D40F6EA006816B9 /* DownloadListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B7FE21F1D40F6EA006816B9 /* DownloadListTableViewCell.m */; };
+		4B7FE2221D40F6EA006816B9 /* DownloadListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B7FE2201D40F6EA006816B9 /* DownloadListTableViewCell.xib */; };
 		4B9584511D3889B800ED22BD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9584501D3889B800ED22BD /* main.m */; };
 		4B9584541D3889B800ED22BD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9584531D3889B800ED22BD /* AppDelegate.m */; };
 		4B95845A1D3889B800ED22BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B9584581D3889B800ED22BD /* Main.storyboard */; };
@@ -171,6 +177,17 @@
 		4B34332A1D3FA6F500986BB2 /* MessageLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageLoginViewController.xib; sourceTree = "<group>"; };
 		4B34332D1D3FBB7E00986BB2 /* MyLoginSucessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLoginSucessViewController.h; sourceTree = "<group>"; };
 		4B34332E1D3FBB7E00986BB2 /* MyLoginSucessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLoginSucessViewController.m; sourceTree = "<group>"; };
+		4B7FE2111D40F196006816B9 /* DownloadListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadListViewController.h; sourceTree = "<group>"; };
+		4B7FE2121D40F196006816B9 /* DownloadListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadListViewController.m; sourceTree = "<group>"; };
+		4B7FE2151D40F4F1006816B9 /* DownloadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadManager.h; sourceTree = "<group>"; };
+		4B7FE2161D40F4F1006816B9 /* DownloadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadManager.m; sourceTree = "<group>"; };
+		4B7FE2171D40F4F1006816B9 /* NSString+Hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Hash.h"; sourceTree = "<group>"; };
+		4B7FE2181D40F4F1006816B9 /* NSString+Hash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Hash.m"; sourceTree = "<group>"; };
+		4B7FE2191D40F4F1006816B9 /* SessionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionModel.h; sourceTree = "<group>"; };
+		4B7FE21A1D40F4F1006816B9 /* SessionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionModel.m; sourceTree = "<group>"; };
+		4B7FE21E1D40F6EA006816B9 /* DownloadListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadListTableViewCell.h; sourceTree = "<group>"; };
+		4B7FE21F1D40F6EA006816B9 /* DownloadListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadListTableViewCell.m; sourceTree = "<group>"; };
+		4B7FE2201D40F6EA006816B9 /* DownloadListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DownloadListTableViewCell.xib; sourceTree = "<group>"; };
 		4B95844C1D3889B800ED22BD /* Product-C.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Product-C.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B9584501D3889B800ED22BD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4B9584521D3889B800ED22BD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -591,6 +608,55 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		4B7FE20D1D40F141006816B9 /* 下载列表 */ = {
+			isa = PBXGroup;
+			children = (
+				4B7FE20E1D40F141006816B9 /* Controller */,
+				4B7FE20F1D40F141006816B9 /* Model */,
+				4B7FE2101D40F141006816B9 /* View */,
+			);
+			path = "下载列表";
+			sourceTree = "<group>";
+		};
+		4B7FE20E1D40F141006816B9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4B7FE2111D40F196006816B9 /* DownloadListViewController.h */,
+				4B7FE2121D40F196006816B9 /* DownloadListViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4B7FE20F1D40F141006816B9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4B7FE2101D40F141006816B9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4B7FE21E1D40F6EA006816B9 /* DownloadListTableViewCell.h */,
+				4B7FE21F1D40F6EA006816B9 /* DownloadListTableViewCell.m */,
+				4B7FE2201D40F6EA006816B9 /* DownloadListTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4B7FE2141D40F4F1006816B9 /* DownloadManager */ = {
+			isa = PBXGroup;
+			children = (
+				4B7FE2151D40F4F1006816B9 /* DownloadManager.h */,
+				4B7FE2161D40F4F1006816B9 /* DownloadManager.m */,
+				4B7FE2171D40F4F1006816B9 /* NSString+Hash.h */,
+				4B7FE2181D40F4F1006816B9 /* NSString+Hash.m */,
+				4B7FE2191D40F4F1006816B9 /* SessionModel.h */,
+				4B7FE21A1D40F4F1006816B9 /* SessionModel.m */,
+			);
+			path = DownloadManager;
+			sourceTree = "<group>";
+		};
 		4B9584431D3889B700ED22BD = {
 			isa = PBXGroup;
 			children = (
@@ -663,6 +729,7 @@
 				4B9586231D3DD3BC00ED22BD /* 音乐人 */,
 				4B3433021D3F56D900986BB2 /* 动态 */,
 				4B9586361D3E1B9600ED22BD /* 我的 */,
+				4B7FE20D1D40F141006816B9 /* 下载列表 */,
 				4B95863A1D3E1B9600ED22BD /* 注册与登录 */,
 				4B9586161D3D0E2500ED22BD /* 音乐搜索 */,
 				4B9585911D3A105900ED22BD /* 各种详情 */,
@@ -736,10 +803,11 @@
 		4B9584A71D38930400ED22BD /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				4B7FE2141D40F4F1006816B9 /* DownloadManager */,
+				4B9584BB1D38BF2900ED22BD /* RequestManager */,
 				4B9584FB1D38C30E00ED22BD /* AFNetworking */,
 				4B9585201D38C30E00ED22BD /* NCMusicEngine */,
 				4B9584F71D38C15400ED22BD /* AFDownloadRequestOperation */,
-				4B9584BB1D38BF2900ED22BD /* RequestManager */,
 				4B9584A81D38931600ED22BD /* PrefixHeader.pch */,
 			);
 			path = Tool;
@@ -1280,6 +1348,7 @@
 			files = (
 				4B95856C1D3918F700ED22BD /* launchImage.png in Resources */,
 				4B9585771D391C6E00ED22BD /* MusicOfTjGeDanCollectionViewCell.xib in Resources */,
+				4B7FE2221D40F6EA006816B9 /* DownloadListTableViewCell.xib in Resources */,
 				4B3432BD1D3F1BB400986BB2 /* 2.jpg in Resources */,
 				4B9585B21D3A57AA00ED22BD /* MyPlayView.xib in Resources */,
 				4B95845F1D3889B800ED22BD /* LaunchScreen.storyboard in Resources */,
@@ -1376,6 +1445,7 @@
 				4B9585761D391C6E00ED22BD /* MusicOfTjGeDanCollectionViewCell.m in Sources */,
 				4B34331F1D3F56D900986BB2 /* DynamicViewController.m in Sources */,
 				4B9586141D3CCC2800ED22BD /* DetailTableViewCell.m in Sources */,
+				4B7FE21D1D40F4F1006816B9 /* SessionModel.m in Sources */,
 				4B3432DD1D3F1E1B00986BB2 /* MusicListModel.m in Sources */,
 				4B9585671D39102D00ED22BD /* MusicOfDayTableViewCell.m in Sources */,
 				4B9585341D38C30E00ED22BD /* NCMusicEngine.m in Sources */,
@@ -1389,18 +1459,21 @@
 				4B95852E1D38C30E00ED22BD /* UIAlertView+AFNetworking.m in Sources */,
 				4B9585A61D3A246900ED22BD /* MyCurrentSongTableViewCell.m in Sources */,
 				4B34332B1D3FA6F500986BB2 /* MessageLoginViewController.m in Sources */,
+				4B7FE21C1D40F4F1006816B9 /* NSString+Hash.m in Sources */,
 				4B3433221D3F56D900986BB2 /* ModelOfSquare.m in Sources */,
 				4B3431FC1D3E229400986BB2 /* LoginViewController.m in Sources */,
 				4B95855D1D38E04800ED22BD /* MusicRecommendTableView.m in Sources */,
 				4B95861F1D3D137A00ED22BD /* MusicSearchViewController.m in Sources */,
 				4B3432D11D3F1D3C00986BB2 /* MusicRankListTableViewCell.m in Sources */,
 				4B9584A61D38916800ED22BD /* RootTabBarViewController.m in Sources */,
+				4B7FE2211D40F6EA006816B9 /* DownloadListTableViewCell.m in Sources */,
 				4B3433231D3F56D900986BB2 /* SquareTableViewCell.m in Sources */,
 				4B95852C1D38C30E00ED22BD /* AFURLSessionManager.m in Sources */,
 				4B3432CD1D3F1D3C00986BB2 /* DetailRankingViewController.m in Sources */,
 				4B95852F1D38C30E00ED22BD /* UIButton+AFNetworking.m in Sources */,
 				4B9585801D39249800ED22BD /* ModelOfTjLive.m in Sources */,
 				4B95852D1D38C30E00ED22BD /* UIActivityIndicatorView+AFNetworking.m in Sources */,
+				4B7FE21B1D40F4F1006816B9 /* DownloadManager.m in Sources */,
 				4B34332F1D3FBB7E00986BB2 /* MyLoginSucessViewController.m in Sources */,
 				4B9584A01D38902100ED22BD /* DetailNavView.m in Sources */,
 				4B9585AD1D3A377E00ED22BD /* MyInspirationView.m in Sources */,
@@ -1425,6 +1498,7 @@
 				4B9585721D391AE400ED22BD /* ModelOfTjGeDan.m in Sources */,
 				4B9584AE1D38B6CB00ED22BD /* MyCommonBaseViewController.m in Sources */,
 				4B3432001D3E23A500986BB2 /* LoginAndRegistView.m in Sources */,
+				4B7FE2131D40F196006816B9 /* DownloadListViewController.m in Sources */,
 				4B95857D1D39236000ED22BD /* MusicOfTjLiveCollectionView.m in Sources */,
 				4B3432DC1D3F1E1B00986BB2 /* MusicListViewController.m in Sources */,
 				4B9584511D3889B800ED22BD /* main.m in Sources */,

@@ -13,6 +13,7 @@
 @property (nonatomic, strong) NSString *songType;
 @property (nonatomic, strong) NSString *songID;
 @property (nonatomic, strong) NSMutableArray *songArray;
+@property (nonatomic, assign) NSInteger myPlayIndex;
 
 // 创建单例播放器
 + (MusicPlayerViewController *)sharedMusicPlayerWithSongType:(NSString *)type songID:(NSString *)songID;

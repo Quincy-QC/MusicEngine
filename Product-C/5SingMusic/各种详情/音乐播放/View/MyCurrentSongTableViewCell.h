@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "SongModel.h"
+#import "MyCurrentSongView.h"
 
 @interface MyCurrentSongTableViewCell : UITableViewCell
+
+@property (nonatomic, strong) MyCurrentSongView *myTableView;
 
 - (void)cellConfiguredByModel:(SongModel *)model withIndex:(NSInteger)index;
 

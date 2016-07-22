@@ -9,6 +9,7 @@
 #import "LoginAndRegistView.h"
 #import "LoginViewController.h"
 #import "MessageLoginViewController.h"
+#import "DownloadListViewController.h"
 
 @implementation LoginAndRegistView
 
@@ -21,6 +22,10 @@
 
 - (IBAction)messageRegistAction:(UIButton *)sender {
     [self.MyParentVC.navigationController pushViewController:[[LoginViewController alloc] init] animated:YES];
+}
+
+- (IBAction)downloadList:(UIButton *)sender {
+    [self.MyParentVC.navigationController pushViewController:[DownloadListViewController sharedDownloadListWithSongModel:nil] animated:YES];
 }
 
 @end

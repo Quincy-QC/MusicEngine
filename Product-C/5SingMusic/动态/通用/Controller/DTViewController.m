@@ -21,8 +21,10 @@
     
     if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
         self.leftBtnType = @"write";
-        self.btnTitleArray = [@[@"广场",@"动态"] mutableCopy];
-        self.vcClassArray = [@[[SquareiewController class], [DynamicViewController class]]mutableCopy];
+//        self.btnTitleArray = [@[@"广场",@"动态"] mutableCopy];
+//        self.vcClassArray = [@[[SquareiewController class], [DynamicViewController class]]mutableCopy];
+        self.btnTitleArray = [@[@"广场"] mutableCopy];
+        self.vcClassArray = [@[[SquareiewController class]] mutableCopy];
     }
     return self;
 }

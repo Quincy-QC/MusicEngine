@@ -43,8 +43,13 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     MyCurrentSongTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"currentSong" forIndexPath:indexPath];
-    [cell cellConfiguredByModel:self.songArray[indexPath.row] withIndex:indexPath.row];
+    SongModel *model = self.songArray[indexPath.row];
+    [cell cellConfiguredByModel:model withIndex:indexPath.row];
+    cell.myTableView = self;
     cell.backgroundColor = KColorWithAlpha(250, 250, 250, 0.1);
+    if (indexPath.row == [MusicPlayerViewController sharedMusicPlayerWithSongType:nil songID:nil].myPlayIndex) {
+        cell.backgroundColor = KColorWithAlpha(140, 140, 255, 0.1);
+    }
     return cell;
 }
 
@@ -74,9 +79,17 @@
     MusicPlayerViewController *musicPlayerVC = [MusicPlayerViewController sharedMusicPlayerWithSongType:nil songID:nil];
     musicPlayerVC.songID = model.ID;
     musicPlayerVC.songType = model.SK;
+    musicPlayerVC.myPlayIndex = indexPath.row;
     if (musicPlayerVC.songType && musicPlayerVC.songID) {
         [musicPlayerVC createDataWithType:@"1"];
     }
+    MyCurrentSongTableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    cell.backgroundColor = KColorWithAlpha(140, 140, 255, 0.1);
+}
+
+- (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
+    MyCurrentSongTableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    cell.backgroundColor = KColorWithAlpha(250, 250, 250, 0.1);
 }
 
 -(void)ConfigMyViewWithArray:(NSArray *)array{

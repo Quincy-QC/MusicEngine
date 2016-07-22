@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface SongModel : NSObject
+@interface SongModel : NSObject <NSCoding>
 @property (nonatomic, strong) NSString *SN; // title
 @property (nonatomic, strong) NSString *NN; // uname
 @property (nonatomic, strong) NSString *I; // icon
