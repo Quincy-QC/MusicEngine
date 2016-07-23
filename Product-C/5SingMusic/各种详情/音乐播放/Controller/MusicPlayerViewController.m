@@ -34,7 +34,7 @@
     vc.songType = type;
     vc.songID = songID;
     if (vc.songType && vc.songID) {
-        if (vc.songModel.ID == vc.songID) {
+        if ([NSString stringWithFormat:@"%@", vc.songModel.ID] == vc.songID) {
             return vc;
         }
         for (SongModel *model in vc.songArray) {
@@ -51,6 +51,33 @@
 - (instancetype)init {
     self.hidesBottomBarWhenPushed = YES;
     return [super init];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self addObserver:self forKeyPath:@"songModel" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context {
+    if ([keyPath isEqualToString:@"songModel"]) {
+        NSValue *newValue = change[NSKeyValueChangeNewKey];
+        NSValue *oldValue = change[NSKeyValueChangeOldKey];
+        if (![newValue isEqual:oldValue]) {
+            for (NSInteger i = 0; i < self.songArray.count; i++) {
+                SongModel *model = self.songArray[i];
+                if ([[NSString stringWithFormat:@"%@", model.ID] isEqualToString:[NSString stringWithFormat:@"%@", self.songModel.ID]]) {
+                    self.myPlayIndex = i;
+                    [self.myCurrentSongV.songTableView reloadData];
+                    return;
+                }
+            }
+        }
+    }
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [self removeObserver:self forKeyPath:@"songModel"];
 }
 
 - (void)createDataWithType:(NSString *)type {
@@ -114,6 +141,7 @@
 
 - (void)moreClick {
     NSLog(@"分享");
+    [self shareAction];
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
@@ -219,6 +247,52 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)shareAction {
+    //1、创建分享参数
+    NSArray* imageArray = @[self.songModel.I];
+    //（注意：图片必须要在Xcode左边目录里面，名称必须要传正确，如果要分享网络图片，可以这样传iamge参数 images:@[@"http://mob.com/Assets/images/logo.png?v=20150320"]）
+    if (imageArray) {
+        
+        NSMutableDictionary *shareParams = [NSMutableDictionary dictionary];
+        [shareParams SSDKSetupShareParamsByText:self.songModel.M
+                                         images:imageArray
+                                            url:[NSURL URLWithString:@"http://5sing.kugou.com/index.html"]
+                                          title:self.songModel.SN
+                                           type:SSDKContentTypeAuto];
+        //2、分享（可以弹出我们的分享菜单和编辑界面）
+        [ShareSDK showShareActionSheet:nil //要显示菜单的视图, iPad版中此参数作为弹出菜单的参照视图，只有传这个才可以弹出我们的分享菜单，可以传分享的按钮对象或者自己创建小的view 对象，iPhone可以传nil不会影响
+                                 items:nil
+                           shareParams:shareParams
+                   onShareStateChanged:^(SSDKResponseState state, SSDKPlatformType platformType, NSDictionary *userData, SSDKContentEntity *contentEntity, NSError *error, BOOL end) {
+                       
+                       switch (state) {
+                           case SSDKResponseStateSuccess:
+                           {
+                               UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"分享成功"
+                                                                                   message:nil
+                                                                                  delegate:nil
+                                                                         cancelButtonTitle:@"确定"
+                                                                         otherButtonTitles:nil];
+                               [alertView show];
+                               break;
+                           }
+                           case SSDKResponseStateFail:
+                           {
+                               UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"分享失败"
+                                                                               message:[NSString stringWithFormat:@"%@",error]
+                                                                              delegate:nil
+                                                                     cancelButtonTitle:@"OK"
+                                                                     otherButtonTitles:nil, nil];
+                               [alert show];
+                               break;
+                           }
+                           default:
+                               break;
+                       }
+                   }];
+    }
 }
 
 /*

@@ -10,7 +10,6 @@
 #import "MyCurrentSongTableViewCell.h"
 
 @interface MyCurrentSongView () <UITableViewDataSource, UITableViewDelegate>
-@property (nonatomic, strong) UITableView *songTableView;
 @property (nonatomic, strong) NSMutableArray *songArray;
 @property (nonatomic, strong) UILabel *numberL;
 

@@ -4,6 +4,13 @@ PODS:
   - SDWebImage (3.8.1):
     - SDWebImage/Core (= 3.8.1)
   - SDWebImage/Core (3.8.1)
+  - ShareSDK3 (3.3.2):
+    - ShareSDK3/ShareSDK (= 3.3.2)
+  - ShareSDK3/ShareSDK (3.3.2)
+  - ShareSDK3/ShareSDKPlatforms/QQ (3.3.2)
+  - ShareSDK3/ShareSDKPlatforms/SinaWeibo (3.3.2)
+  - ShareSDK3/ShareSDKPlatforms/WeChat (3.3.2)
+  - ShareSDK3/ShareSDKUI (3.3.2)
   - SMSSDK (2.0.4)
   - SVProgressHUD (2.0.3)
 
@@ -11,6 +18,11 @@ DEPENDENCIES:
   - Masonry (~> 1.0.1)
   - MOBFoundation_IDFA
   - SDWebImage (~> 3.8.1)
+  - ShareSDK3
+  - ShareSDK3/ShareSDKPlatforms/QQ
+  - ShareSDK3/ShareSDKPlatforms/SinaWeibo
+  - ShareSDK3/ShareSDKPlatforms/WeChat
+  - ShareSDK3/ShareSDKUI
   - SMSSDK
   - SVProgressHUD (~> 2.0.3)
 
@@ -18,9 +30,10 @@ SPEC CHECKSUMS:
   Masonry: a1a931a0d08870ed8ae415a2ea5ea68ebcac77df
   MOBFoundation_IDFA: 23c44027c5f4bfb185cb14274d05e1cf63467f06
   SDWebImage: 35f9627a3e44b4f292a8a8ce6a531fa488239b91
+  ShareSDK3: c76cb96eb38e079952b8157071486d945faa2df2
   SMSSDK: 642b6a8c55fd382be44487cd5e0b0710681895f9
   SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
 
-PODFILE CHECKSUM: 2719b9b9e19f5fed5f52e918161318737fb26574
+PODFILE CHECKSUM: 6ad6b12706ab4fdf1747623769caae4b6dabd2a2
 
 COCOAPODS: 1.0.1

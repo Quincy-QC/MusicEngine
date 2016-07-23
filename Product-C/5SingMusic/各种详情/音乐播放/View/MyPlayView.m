@@ -55,7 +55,7 @@
     self.musicProgressS.value = currentTime/totalTime;
     self.currentTimeL.text = [NSString stringWithFormat:@"%02ld:%02ld", (NSInteger)currentTime/60, (NSInteger)currentTime%60];
     self.totalTimeL.text = [NSString stringWithFormat:@"%02ld:%02ld", (NSInteger)totalTime/60, (NSInteger)totalTime%60];
-    if (currentTime >= totalTime - 1.0 && totalTime > 0) {
+    if (currentTime >= totalTime - 1.0 && totalTime > 1) {
         [(MusicPlayerViewController *)self.MyParentVC playNextMusicAuto];
     }
 }

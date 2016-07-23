@@ -9,6 +9,7 @@
 #import "MyCommonView.h"
 
 @interface MyCurrentSongView : MyCommonView
+@property (nonatomic, strong) UITableView *songTableView;
 -(void)ConfigMyViewWithArray:(NSArray *)array;
 
 @end
