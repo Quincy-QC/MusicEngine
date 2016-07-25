@@ -34,8 +34,6 @@
 @implementation MusicListViewController
 
 
-
-
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
@@ -67,6 +65,7 @@
         NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:(NSJSONReadingMutableContainers) error:nil];
         _listArray = [MusicListModel scrollModelConfigureWithJsonDic:dic];
         [_myCollectView reloadData];
+        _firstAppear = NO;
         [SVProgressHUD showSuccessWithStatus:@"加载成功"];
         [SVProgressHUD dismissWithDelay:0.3];
     } error:^(NSError *error) {
@@ -117,7 +116,7 @@
     [self requestdataSource];
 }
 - (void)initMyTableView{
-    _myTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 85, KScreenH) style:(UITableViewStylePlain)];
+    _myTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 85, KScreenH - 64 - 49) style:(UITableViewStylePlain)];
     _myTableView.delegate = self;
     _myTableView.dataSource = self;
     _myTableView.rowHeight = 50;
@@ -136,9 +135,10 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"tableCell"];
     if (!cell) {
-        cell = [[UITableViewCell alloc] init];
+        cell = [[UITableViewCell alloc] initWithStyle:(UITableViewCellStyleDefault) reuseIdentifier:@"tableCell"];
     }
     cell.textLabel.text = GenDanTypes[indexPath.row];
+    cell.textLabel.textColor = KColor(26, 179, 0);
     if (_firstAppear) {
         NSInteger selectIndex = 0;
         NSIndexPath *selectIndexpath = [NSIndexPath indexPathForRow:selectIndex inSection:0];
@@ -159,7 +159,7 @@
 - (void)initMyCollectView{
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
     layout.scrollDirection = UICollectionViewScrollDirectionVertical;
-    _myCollectView = [[UICollectionView alloc] initWithFrame:CGRectMake(85, 30, KScreenW - 80, KScreenH - 64) collectionViewLayout:layout];
+    _myCollectView = [[UICollectionView alloc] initWithFrame:CGRectMake(85, 30, KScreenW - 80, KScreenH - 64 - 30 - 49) collectionViewLayout:layout];
     _myCollectView.backgroundColor = [UIColor whiteColor];
     _myCollectView.delegate = self;
     _myCollectView.dataSource = self;

@@ -21,7 +21,7 @@
 }
 
 - (IBAction)messageRegistAction:(UIButton *)sender {
-    [self.MyParentVC.navigationController pushViewController:[[LoginViewController alloc] init] animated:YES];
+    [self.MyParentVC.navigationController pushViewController:[[MessageLoginViewController alloc] init] animated:YES];
 }
 
 - (IBAction)downloadList:(UIButton *)sender {

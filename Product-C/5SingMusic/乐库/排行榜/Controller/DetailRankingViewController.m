@@ -28,7 +28,7 @@
 }
 
 - (void)initMyTableview{
-    _myTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, KScreenW, KScreenH) style:(UITableViewStylePlain)];
+    _myTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, KScreenW, KScreenH - 64) style:(UITableViewStylePlain)];
     _myTableView.dataSource = self;
     _myTableView.delegate = self;
     _myTableView.rowHeight = 60;

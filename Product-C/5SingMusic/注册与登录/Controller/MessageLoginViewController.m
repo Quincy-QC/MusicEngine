@@ -37,7 +37,8 @@
 }
 
 - (IBAction)sendMessageAction:(UIButton *)sender {
-    if (!self.verificationCodeTF.text || !self.verificationCodeTF.text.length) {
+    if (self.phoneNumTF.text.length != 11) {
+        [self createAlertController:@"请输入正确的手机号码"];
         return;
     }
     [self changeButtonWithSender:sender];
@@ -66,7 +67,7 @@
 - (void)changeButtonWithSender:(UIButton *)sender {
     sender.enabled = NO;
     sender.backgroundColor = KColor(255, 255, 255);
-    self.second = 609911;
+    self.second = 60;
     [self.timer setFireDate:[NSDate date]];
 }
 
@@ -84,7 +85,8 @@
 }
 
 - (IBAction)loginAction:(UIButton *)sender {
-    if (!self.verificationCodeTF.text || !self.verificationCodeTF.text.length) {
+    if (self.verificationCodeTF.text.length != 4) {
+        [self createAlertController:@"请输入验证码"];
         return;
     }
     /**
