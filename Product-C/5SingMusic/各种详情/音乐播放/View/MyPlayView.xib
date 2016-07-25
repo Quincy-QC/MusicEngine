@@ -134,7 +134,7 @@
                 <outlet property="musicAboveButton" destination="BtN-jQ-9mL" id="sok-1p-KkO"/>
                 <outlet property="musicNextButton" destination="UrZ-Is-S2S" id="2ex-EW-ZJy"/>
                 <outlet property="musicProgressS" destination="ULg-Qw-sRj" id="A2z-9d-BMg"/>
-                <outlet property="playButton" destination="x1U-my-oPT" id="SBU-Dt-2BU"/>
+                <outlet property="playButton" destination="x1U-my-oPT" id="4FR-xd-cO3"/>
                 <outlet property="titleL" destination="t7S-5m-lLC" id="s4J-YZ-oau"/>
                 <outlet property="totalTimeL" destination="fqU-8N-qIP" id="0FA-56-rsb"/>
             </connections>

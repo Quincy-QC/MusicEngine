@@ -12,6 +12,10 @@
 @interface MyPlayView : MyCommonView
 @property (strong, nonatomic) IBOutlet UIButton *musicAboveButton;
 @property (strong, nonatomic) IBOutlet UIButton *musicNextButton;
+@property (strong, nonatomic) IBOutlet UIButton *playButton;
+@property (nonatomic, strong) NCMusicEngine *player;
+
+@property (nonatomic, copy) void (^MusicIsPlaying)(CGFloat totalProgress, CGFloat progress, UIImage *iconImage, NSString *title);
 
 - (void)toPlayWithSong:(SongModel *)model;
 

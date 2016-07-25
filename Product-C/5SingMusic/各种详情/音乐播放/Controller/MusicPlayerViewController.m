@@ -19,8 +19,6 @@
 @property (nonatomic, strong) MyCurrentSongView *myCurrentSongV;
 @property (nonatomic, strong) MyLyricView *myLyricV;
 @property (nonatomic, strong) MyInspirationView *myInspirationV;
-@property (nonatomic, strong) MyPlayView *myPlayV;
-@property (nonatomic, strong) SongModel *songModel;
 
 @end
 

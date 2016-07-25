@@ -1310,6 +1310,7 @@
 				TargetAttributes = {
 					4B95844B1D3889B800ED22BD = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = DBFY6PLUQ3;
 					};
 					4B9584641D3889B800ED22BD = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -1664,11 +1665,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Product-C/Tool/PrefixHeader.pch";
 				INFOPLIST_FILE = "Product-C/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "UntilYou.Product-C";
+				PRODUCT_BUNDLE_IDENTIFIER = "UntilYou.Product-Test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -1679,11 +1681,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Product-C/Tool/PrefixHeader.pch";
 				INFOPLIST_FILE = "Product-C/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "UntilYou.Product-C";
+				PRODUCT_BUNDLE_IDENTIFIER = "UntilYou.Product-Test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

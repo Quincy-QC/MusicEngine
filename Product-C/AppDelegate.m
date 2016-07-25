@@ -8,6 +8,10 @@
 
 #import "AppDelegate.h"
 #import "RootTabBarViewController.h"
+#import "MusicPlayerViewController.h"
+#import "MyPlayView.h"
+#import "NCMusicEngine.h"
+#import <MediaPlayer/MediaPlayer.h>
 
 #import <ShareSDK/ShareSDK.h>
 #import <ShareSDKConnector/ShareSDKConnector.h>
@@ -107,6 +111,9 @@ NSString *const appSecret = @"3f3d4d766ed10033b3d5a9b786b1cb57";
                  break;
          }
      }];
+    
+    // 设置锁屏界面
+    [self setPlayingInfo];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
@@ -117,6 +124,8 @@ NSString *const appSecret = @"3f3d4d766ed10033b3d5a9b786b1cb57";
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    
+    [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
@@ -129,6 +138,52 @@ NSString *const appSecret = @"3f3d4d766ed10033b3d5a9b786b1cb57";
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+// 锁屏界面设置
+- (void)setPlayingInfo {
+    MusicPlayerViewController *musicPlayer = [MusicPlayerViewController sharedMusicPlayerWithSongType:nil songID:nil];
+    MyPlayView *myPlayerView = musicPlayer.myPlayV;
+    NSMutableDictionary *musicInfo = [NSMutableDictionary dictionary];
+    myPlayerView.MusicIsPlaying = ^(CGFloat totalProgress, CGFloat progress, UIImage *iconImage, NSString *title) {
+        [musicInfo setValue:title forKey:MPMediaItemPropertyTitle];
+        if (iconImage) {
+            [musicInfo setValue:[[MPMediaItemArtwork alloc] initWithImage:iconImage] forKey:MPMediaItemPropertyArtwork];
+        }
+        [musicInfo setValue:[NSNumber numberWithDouble:totalProgress] forKey:MPMediaItemPropertyPlaybackDuration];
+        [musicInfo setValue:[NSNumber numberWithDouble:progress] forKey:MPNowPlayingInfoPropertyElapsedPlaybackTime];
+        [[MPNowPlayingInfoCenter defaultCenter] setNowPlayingInfo:musicInfo];
+    };
+}
+
+// 后台用户交互按钮设置
+- (void)remoteControlReceivedWithEvent:(UIEvent *)event {
+    MusicPlayerViewController *musicPlayer = [MusicPlayerViewController sharedMusicPlayerWithSongType:nil songID:nil];
+    MyPlayView *myPlayerView = musicPlayer.myPlayV;
+    if (event.type == UIEventTypeRemoteControl) {
+        switch (event.subtype) {
+            case UIEventSubtypeRemoteControlPlay: {
+                myPlayerView.playButton.selected = YES;
+                [myPlayerView.player resume];
+                break;
+            }
+            case UIEventSubtypeRemoteControlPause: {
+                myPlayerView.playButton.selected = NO;
+                [myPlayerView.player stop];
+                break;
+            }
+            case UIEventSubtypeRemoteControlNextTrack: {
+                [musicPlayer nextMusicAction];
+                break;
+            }
+            case UIEventSubtypeRemoteControlPreviousTrack: {
+                [musicPlayer aboveMusicAction];
+                break;
+            }
+            default:
+                break;
+        }
+    }
 }
 
 @end

@@ -14,8 +14,6 @@
 @property (strong, nonatomic) IBOutlet UISlider *musicProgressS;
 @property (strong, nonatomic) IBOutlet UILabel *currentTimeL;
 @property (strong, nonatomic) IBOutlet UILabel *totalTimeL;
-@property (strong, nonatomic) IBOutlet UIButton *playButton;
-@property (nonatomic, strong) NCMusicEngine *player;
 
 @end
 
@@ -36,10 +34,6 @@
     return _player;
 }
 
-//- (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag {
-//    [(MusicPlayerViewController *)self.MyParentVC playNextMusicAuto];
-//}
-
 - (void)toPlayWithSong:(SongModel *)model {
     [self.iconV sd_setImageWithURL:[NSURL URLWithString:model.I]];
     self.titleL.text = model.SN;
@@ -55,6 +49,7 @@
     self.musicProgressS.value = currentTime/totalTime;
     self.currentTimeL.text = [NSString stringWithFormat:@"%02ld:%02ld", (NSInteger)currentTime/60, (NSInteger)currentTime%60];
     self.totalTimeL.text = [NSString stringWithFormat:@"%02ld:%02ld", (NSInteger)totalTime/60, (NSInteger)totalTime%60];
+    self.MusicIsPlaying(totalTime, currentTime, self.iconV.image, self.titleL.text); // 播放信息回调
     if (currentTime >= totalTime - 1.0 && totalTime > 1) {
         [(MusicPlayerViewController *)self.MyParentVC playNextMusicAuto];
     }
