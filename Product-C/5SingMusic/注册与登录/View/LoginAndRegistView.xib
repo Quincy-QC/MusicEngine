@@ -30,6 +30,11 @@
                             <integer key="value" value="5"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="kLh-Iw-Nec"/>
+                        </mask>
+                    </variation>
                     <connections>
                         <action selector="loginAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="yEK-RR-t3X"/>
                     </connections>
@@ -50,6 +55,11 @@
                             <integer key="value" value="5"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="Hx8-Pb-JAa"/>
+                        </mask>
+                    </variation>
                     <connections>
                         <action selector="RegistAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="Rq3-Ss-5CN"/>
                     </connections>
@@ -87,25 +97,29 @@
             </subviews>
             <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
+                <constraint firstItem="yOb-OD-NUs" firstAttribute="width" secondItem="cJ8-qP-Rcl" secondAttribute="width" id="13Q-x2-7SS"/>
+                <constraint firstItem="yOb-OD-NUs" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="32" id="1AY-qq-Lrf"/>
                 <constraint firstItem="bpl-nL-FOW" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="-100" id="5pd-vS-56e"/>
+                <constraint firstAttribute="trailing" secondItem="cJ8-qP-Rcl" secondAttribute="trailing" constant="32" id="7u4-uf-htW"/>
                 <constraint firstItem="YCy-hH-lSi" firstAttribute="top" secondItem="yOb-OD-NUs" secondAttribute="top" id="9bx-gg-N1U"/>
                 <constraint firstItem="dDc-aA-rBn" firstAttribute="width" secondItem="cJ8-qP-Rcl" secondAttribute="width" id="CFm-RH-RkM"/>
                 <constraint firstItem="dDc-aA-rBn" firstAttribute="top" secondItem="cJ8-qP-Rcl" secondAttribute="bottom" constant="50" id="HD9-fs-vJU"/>
                 <constraint firstItem="YCy-hH-lSi" firstAttribute="width" secondItem="cJ8-qP-Rcl" secondAttribute="width" id="OEQ-6Z-Zbu"/>
                 <constraint firstItem="bpl-nL-FOW" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="PqB-Tc-XHq"/>
-                <constraint firstItem="yOb-OD-NUs" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" constant="-100" id="QKA-nQ-2D3"/>
                 <constraint firstItem="YCy-hH-lSi" firstAttribute="top" secondItem="yOb-OD-NUs" secondAttribute="bottom" constant="50" id="Qc6-ft-b64"/>
+                <constraint firstItem="yOb-OD-NUs" firstAttribute="width" secondItem="cJ8-qP-Rcl" secondAttribute="width" id="UOM-q3-7Da"/>
                 <constraint firstItem="dDc-aA-rBn" firstAttribute="trailing" secondItem="cJ8-qP-Rcl" secondAttribute="trailing" id="WNG-lX-NXU"/>
                 <constraint firstItem="YCy-hH-lSi" firstAttribute="leading" secondItem="yOb-OD-NUs" secondAttribute="leading" id="Y2w-tZ-3e0"/>
-                <constraint firstItem="cJ8-qP-Rcl" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" constant="100" id="aGk-Sv-rg9"/>
                 <constraint firstItem="YCy-hH-lSi" firstAttribute="height" secondItem="cJ8-qP-Rcl" secondAttribute="height" id="abS-gC-kIT"/>
                 <constraint firstItem="cJ8-qP-Rcl" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="80" id="dAD-Km-JqS"/>
+                <constraint firstItem="cJ8-qP-Rcl" firstAttribute="leading" secondItem="yOb-OD-NUs" secondAttribute="trailing" constant="50" id="jWV-K7-5Mx"/>
                 <constraint firstItem="dDc-aA-rBn" firstAttribute="height" secondItem="cJ8-qP-Rcl" secondAttribute="height" id="mdo-oT-FTw"/>
                 <constraint firstItem="yOb-OD-NUs" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="80" id="xM8-aM-u82"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
             <variation key="default">
                 <mask key="constraints">
+                    <exclude reference="13Q-x2-7SS"/>
                     <exclude reference="9bx-gg-N1U"/>
                 </mask>
             </variation>

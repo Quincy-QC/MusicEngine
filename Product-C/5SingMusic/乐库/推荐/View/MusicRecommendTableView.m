@@ -96,9 +96,9 @@
     switch (indexPath.section) {
         case 0: return KRealValue(150);
         case 1: return KRealValue(130);
-        case 2: return KRealValue((KScreenW-30)/3 + 10);
-        case 3: return KRealValue((KScreenW-30)/3 + 10);
-        case 4: return 44;
+        case 2: return (KScreenW-30)/3 + 10;
+        case 3: return (KScreenW-30)/3 + 10;
+        case 4: return KRealValue(44);
         default: return 0;
     }
 }

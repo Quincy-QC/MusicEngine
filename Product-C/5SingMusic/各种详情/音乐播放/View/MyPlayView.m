@@ -29,7 +29,7 @@
 
 - (NCMusicEngine *)player {
     if (!_player) {
-        _player = [[NCMusicEngine alloc] init];
+        _player = [[NCMusicEngine alloc] initWithSetBackgroundPlaying:YES];
         _player.delegate = self;
 //        _player.player.delegate = self;
     }
