@@ -28,10 +28,10 @@
     [self addSubview:_titleLabel];
     
     //  右侧按钮
-    _rightButton =[self creatButtonWithFrame:CGRectMake(KScreenW-35, 25, 30, 30) Image:@"music6" SelectImage:@"music6" SuperView:self];
+    _rightButton =[self creatButtonWithFrame:CGRectMake(KScreenW-45, 25, 40, 40) Image:@"music6" SelectImage:@"music6" SuperView:self];
     [_rightButton addTarget:self action:@selector(listenMusic:) forControlEvents:UIControlEventTouchUpInside];
     
-    _leftButton =[self creatButtonWithFrame:CGRectMake(5, 25, 30, 30) Image:@"back_normal" SelectImage:@"back_press" SuperView:self];
+    _leftButton =[self creatButtonWithFrame:CGRectMake(5, 25, 40, 40) Image:@"back_normal" SelectImage:@"back_press" SuperView:self];
     [_leftButton addTarget:self action:@selector(back:) forControlEvents:UIControlEventTouchUpInside];
 
 }

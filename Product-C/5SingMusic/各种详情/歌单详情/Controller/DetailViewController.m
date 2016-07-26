@@ -33,7 +33,7 @@
 }
 
 - (void)initheadview{
-    _headview =[[HeadVIew alloc]initWithFrame:CGRectMake(0, 0, KScreenW, 200)];
+    _headview =[[HeadVIew alloc]initWithFrame:CGRectMake(0, 0, KScreenW, 350)];
     _headview.MyParentVC = self;
     [_headview.bfBtn addTarget:self action:@selector(playAll) forControlEvents:(UIControlEventTouchUpInside)];
 }

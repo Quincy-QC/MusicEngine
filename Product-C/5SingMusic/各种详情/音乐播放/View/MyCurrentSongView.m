@@ -93,7 +93,7 @@
 
 -(void)ConfigMyViewWithArray:(NSArray *)array{
     self.songArray =[[NSMutableArray alloc]initWithArray:array];
-    self.numberL.text =[NSString stringWithFormat:@"%ld 首歌曲",self.songArray.count];
+    self.numberL.text =[NSString stringWithFormat:@"%ld. 首歌曲",self.songArray.count];
     [self.songTableView reloadData];
 }
 

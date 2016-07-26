@@ -13,10 +13,10 @@
 - (instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
     if (self) {
-        _bgview =[[UIImageView alloc]initWithFrame:CGRectMake(0, 0, KScreenW, 150)];
+        _bgview =[[UIImageView alloc]initWithFrame:CGRectMake(0, 0, KScreenW, 290)];
         [self addSubview:_bgview];
         
-        _GrayView =[[UIView alloc]initWithFrame:CGRectMake(0, 120, KScreenW, 30)];
+        _GrayView =[[UIView alloc]initWithFrame:CGRectMake(0, 260, KScreenW, 30)];
         _GrayView.backgroundColor =[UIColor colorWithRed:100/255 green:100/255 blue:100/255 alpha:0.4];
         [self addSubview:_GrayView];
         
@@ -38,17 +38,17 @@
         [_GrayView addSubview:_shareBtn];
         
         _bfBtn =[UIButton buttonWithType:UIButtonTypeCustom];
-        _bfBtn.frame =CGRectMake(KScreenW-40, 5, 20, 20);
+        _bfBtn.frame =CGRectMake(KScreenW-40, 0, 30, 30);
         [_bfBtn setImage:[UIImage imageNamed:@"play_b"] forState:UIControlStateNormal];
         [_GrayView addSubview:_bfBtn];
         
-        _TextLabel =[[UILabel alloc]initWithFrame:CGRectMake(5, 150, KScreenW-20, 30)];
+        _TextLabel =[[UILabel alloc]initWithFrame:CGRectMake(5, 290, KScreenW-20, 40)];
         _TextLabel.font =[UIFont systemFontOfSize:15];
         _TextLabel.textColor =[UIColor grayColor];
         _TextLabel.numberOfLines =2;
         [self addSubview:_TextLabel];
         
-        _TypeLabel =[[UILabel alloc]initWithFrame:CGRectMake(5, 180, KScreenW-20, 20)];
+        _TypeLabel =[[UILabel alloc]initWithFrame:CGRectMake(5, 330, KScreenW-20, 20)];
         _TypeLabel.font =[UIFont systemFontOfSize:15];
         _TypeLabel.textColor =[UIColor grayColor];
         

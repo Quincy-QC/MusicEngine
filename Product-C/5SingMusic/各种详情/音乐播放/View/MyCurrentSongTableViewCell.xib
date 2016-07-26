@@ -14,19 +14,25 @@
                 <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tvk-gF-ECx">
-                        <rect key="frame" x="10" y="10" width="354" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tvk-gF-ECx">
+                        <rect key="frame" x="10" y="11" width="344" height="20"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W5z-zA-BrF">
-                        <rect key="frame" x="374" y="5" width="30" height="30"/>
+                        <rect key="frame" x="364" y="0.0" width="40" height="40"/>
                         <constraints>
+                            <constraint firstAttribute="height" constant="40" id="0KL-sT-fjx"/>
                             <constraint firstAttribute="height" constant="30" id="1aW-d7-24n"/>
-                            <constraint firstAttribute="width" constant="30" id="aCr-mu-DHj"/>
+                            <constraint firstAttribute="width" constant="40" id="aCr-mu-DHj"/>
                         </constraints>
                         <state key="normal" image="downFinished"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="1aW-d7-24n"/>
+                            </mask>
+                        </variation>
                         <connections>
                             <action selector="downLoadAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="g1f-kP-6pn"/>
                         </connections>
